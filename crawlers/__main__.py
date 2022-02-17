@@ -2,6 +2,8 @@ import os
 import re
 import requests
 
+from multiprocessing import Pool
+
 
 def write_to_file(filename, contents):
     with open(filename, 'w') as f:
@@ -24,14 +26,31 @@ def read_bandit_page(levelnum):
     content = response.iter_lines()
 
     # Read until level title
-    title = b'<script>renderLevelTitle("bandit", 0);</script>'
+    title = f'<script>renderLevelTitle("bandit", {levelnum});</script>'.encode()
+    f.write(f'<h1>Bandit {levelnum}</h1>\n')
     while True:
         line = next(content)
         if line == title:
             break
 
-    # Read html until last interesting piece of data
-    lookfor = b'<h2 id="helpful-reading-material">Helpful Reading Material</h2>'
+    # Read task description
+    while True:
+        line = next(content)
+        f.write(line.decode("utf-8") + '\n')
+        if line.decode("utf-8").endswith('</p>'):
+            break
+
+    # Read helpful commands
+    commands = b'<h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>'
+    while True:
+        line = next(content)
+        if line == commands:
+            break
+    f.write(line.decode("utf-8") + '\n')
+    f.write(next(content).decode("utf-8") + '\n')
+
+    return
+    taskdescr = b'< h2 id = "commands-you-may-need-to-solve-this-level" > Commands you may need to solve this level < /h2 >'
     while True:
         line = next(content)
         if not line:
@@ -40,17 +59,27 @@ def read_bandit_page(levelnum):
             break
         f.write(line.decode("utf-8") + '\n')
 
-    lookfor = b'</ul>'
-    while True:
-        line = next(content)
-        if not line:
-            continue
-        if line == lookfor:
-            break
-        f.write(line.decode("utf-8") + '\n')
+    # # Read helpful commands (if exists)
+    # lookfor = b'<h2 id="helpful-reading-material">Helpful Reading Material</h2>'
+    # while True:
+    #     line = next(content)
+    #     if not line:
+    #         continue
+    #     if line == lookfor:
+    #         break
+    #     f.write(line.decode("utf-8") + '\n')
+
+    # lookfor = b'</ul>'
+    # while True:
+    #     line = next(content)
+    #     if not line:
+    #         continue
+    #     if line == lookfor:
+    #         break
+    #     f.write(line.decode("utf-8") + '\n')
 
     # Get last line
-    f.write(line.decode("utf-8") + '\n')
+    # f.write(line.decode("utf-8") + '\n')
 
     # End the file and close it
     f.write('</html>')
@@ -60,9 +89,8 @@ def read_bandit_page(levelnum):
 
 def crawl_bandit():
     maxlevel = 34
-    for level in range(maxlevel):
-        read_bandit_page(level)
-        break
+    with Pool() as pool:
+        pool.map(read_bandit_page, (i for i in range(maxlevel + 1)))
 
 
 if __name__ == '__main__':
