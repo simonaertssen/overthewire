@@ -15,6 +15,9 @@ def crawl_bandit():
 
     maxgamenum = 34
     for gamenum in range(maxgamenum):
+        # Open an output file
+        filename = 'bandit/bandit{gamenum}.md'
+        f = open()
         contents = requests.get(f"{url}/bandit{gamenum}.html", stream=True)
         all_lines = contents.iter_lines()
 
@@ -25,8 +28,7 @@ def crawl_bandit():
             if line == title:
                 break
 
-        # Skip some lines
-        next(all_lines)
+        # Read html until
 
         # # Read until level header
         # _, _, post = code.text.partition(title)
