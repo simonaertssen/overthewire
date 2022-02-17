@@ -8,45 +8,61 @@ def write_to_file(filename, contents):
         f.write(contents)
 
 
-def crawl_bandit():
+def read_bandit_page(levelnum):
+    """Read a single bandit page."""
+    # Open the right output file in the right directory
+    if not os.path.isdir('./bandit'):
+        os.mkdir('./bandit')
+
+    filename = f'./bandit/bandit{levelnum}.html'
+    f = open(filename, 'w')
+    f.write('<html>\n')
+
+    # Fetch url contents
     url = "https://overthewire.org/wargames/bandit/"
+    response = requests.get(f"{url}/bandit{levelnum}.html", stream=True)
+    content = response.iter_lines()
 
+    # Read until level title
     title = b'<script>renderLevelTitle("bandit", 0);</script>'
+    while True:
+        line = next(content)
+        if line == title:
+            break
 
-    maxgamenum = 34
-    for gamenum in range(maxgamenum):
-        # Open an output file
-        filename = 'bandit/bandit{gamenum}.md'
-        f = open()
-        contents = requests.get(f"{url}/bandit{gamenum}.html", stream=True)
-        all_lines = contents.iter_lines()
+    # Read html until last interesting piece of data
+    lookfor = b'<h2 id="helpful-reading-material">Helpful Reading Material</h2>'
+    while True:
+        line = next(content)
+        if not line:
+            continue
+        if line == lookfor:
+            break
+        f.write(line.decode("utf-8") + '\n')
 
-        # Read until level title
-        while True:
-            line = next(all_lines)
-            print(line, title, line == title)
-            if line == title:
-                break
+    lookfor = b'</ul>'
+    while True:
+        line = next(content)
+        if not line:
+            continue
+        if line == lookfor:
+            break
+        f.write(line.decode("utf-8") + '\n')
 
-        # Read html until
+    # Get last line
+    f.write(line.decode("utf-8") + '\n')
 
-        # # Read until level header
-        # _, _, post = code.text.partition(title)
-        # print(post)
+    # End the file and close it
+    f.write('</html>')
+    f.close()
+    return 0
 
-        # # Get all the information
-        # titlepattern = '<h2 id="level-goal">(.*?)</h2>'
-        # titletext = re.search(titlepattern, post).group(1)
-        # print(titletext)
 
-        # goalpattern = '<p>(.*?)</p>'
-        # goaltext = re.search(goalpattern, post).group(1)
-        # print(goaltext)
+def crawl_bandit():
+    maxlevel = 34
+    for level in range(maxlevel):
+        read_bandit_page(level)
         break
-
-
-# def crawl():
-#     requests
 
 
 if __name__ == '__main__':
