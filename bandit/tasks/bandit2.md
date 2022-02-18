@@ -16,6 +16,16 @@ located in the home directory</p>
 
 
 <h1>Solution</h1>
+```
+user@host:~$ ssh bandit1@bandit.labs.overthewire.org -p 2220
+boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+bandit1@bandit:~$ ls -a
+-  .  ..  .bash_logout  .bashrc  .profile
+bandit1@bandit:~$ cat < -
+CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+```
+
 <div style="text-align: left"><a href="bandit1.md">Level 1</a></div>
 <div style="text-align: right"><a href="bandit3.md">Level 3</a></div>
 </html>

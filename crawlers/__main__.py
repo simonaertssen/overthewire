@@ -51,9 +51,9 @@ def read_bandit_page(levelnum):
     # Pull the solution on print to the same file as well
     f.write('<h1>Solution</h1>\n')
     if levelnum > 0:
-        if os.path.isfile(f'./bandit/solutions/bandit{levelnum}'):
-            with open(f'./bandit/solutions/bandit{levelnum}') as g:
-                f.write(g.read())  # Copy all contents into the new file
+        if os.path.isfile(f'./bandit/solutions/bandit{levelnum}.md'):
+            with open(f'./bandit/solutions/bandit{levelnum}.md') as g:
+                f.write(g.read() + '\n')  # Copy all contents into the new file
 
     # Write previous and next level to the bottom of the page
     if levelnum > 0:

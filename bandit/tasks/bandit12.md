@@ -16,6 +16,17 @@ rotated by 13 positions</p>
 
 
 <h1>Solution</h1>
+```
+user@host:~$ ssh bandit11@bandit.labs.overthewire.org -p 2220
+IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+bandit11@bandit:~$ cat data.txt
+Gur cnffjbeq vf 5Gr8L4qetPEsPk8htqjhRK8XSP6x2RHh
+bandit11@bandit:~$ cat data.txt | tr '[a-z]' '[n-za-m]' | tr '[A-Z]' '[N-ZA-M]'
+The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+bandit11@bandit:~$
+```
+
 <div style="text-align: left"><a href="bandit11.md">Level 11</a></div>
 <div style="text-align: right"><a href="bandit13.md">Level 13</a></div>
 </html>
