@@ -15,6 +15,6 @@ to log into bandit18, this is related to the next level, bandit19</strong></p>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="bandit17.html">Level 17</a></div>
-<div style="text-align: right"><a href="bandit19.html">Level 19</a></div>
+<div style="text-align: left"><a href="bandit17.md">Level 17</a></div>
+<div style="text-align: right"><a href="bandit19.md">Level 19</a></div>
 </html>

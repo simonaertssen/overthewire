@@ -15,6 +15,6 @@ the <strong>inhere</strong> directory and has all of the following properties:</
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="bandit5.html">Level 5</a></div>
-<div style="text-align: right"><a href="bandit7.html">Level 7</a></div>
+<div style="text-align: left"><a href="bandit5.md">Level 5</a></div>
+<div style="text-align: right"><a href="bandit7.md">Level 7</a></div>
 </html>

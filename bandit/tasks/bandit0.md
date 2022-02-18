@@ -20,5 +20,5 @@ logged in, go to the <a href="/wargames/bandit/bandit1.html">Level 1</a> page to
 
 
 <h1>Solution</h1>
-<div style="text-align: right"><a href="bandit1.html">Level 1</a></div>
+<div style="text-align: right"><a href="bandit1.md">Level 1</a></div>
 </html>

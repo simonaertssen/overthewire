@@ -11,6 +11,6 @@ up, try the “reset” command.</p>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="bandit4.html">Level 4</a></div>
-<div style="text-align: right"><a href="bandit6.html">Level 6</a></div>
+<div style="text-align: left"><a href="bandit4.md">Level 4</a></div>
+<div style="text-align: right"><a href="bandit6.md">Level 6</a></div>
 </html>

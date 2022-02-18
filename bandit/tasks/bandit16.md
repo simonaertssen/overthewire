@@ -22,6 +22,6 @@ that command…</strong></p>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="bandit15.html">Level 15</a></div>
-<div style="text-align: right"><a href="bandit17.html">Level 17</a></div>
+<div style="text-align: left"><a href="bandit15.md">Level 15</a></div>
+<div style="text-align: right"><a href="bandit17.md">Level 17</a></div>
 </html>

@@ -10,6 +10,6 @@
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="bandit3.html">Level 3</a></div>
-<div style="text-align: right"><a href="bandit5.html">Level 5</a></div>
+<div style="text-align: left"><a href="bandit3.md">Level 3</a></div>
+<div style="text-align: right"><a href="bandit5.md">Level 5</a></div>
 </html>

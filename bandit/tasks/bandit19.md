@@ -11,6 +11,6 @@ to log you out when you log in with SSH.</p>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="bandit18.html">Level 18</a></div>
-<div style="text-align: right"><a href="bandit20.html">Level 20</a></div>
+<div style="text-align: left"><a href="bandit18.md">Level 18</a></div>
+<div style="text-align: right"><a href="bandit20.md">Level 20</a></div>
 </html>

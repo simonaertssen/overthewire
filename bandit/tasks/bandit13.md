@@ -20,6 +20,6 @@ cp, mv, file</p>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="bandit12.html">Level 12</a></div>
-<div style="text-align: right"><a href="bandit14.html">Level 14</a></div>
+<div style="text-align: left"><a href="bandit12.md">Level 12</a></div>
+<div style="text-align: right"><a href="bandit14.md">Level 14</a></div>
 </html>
