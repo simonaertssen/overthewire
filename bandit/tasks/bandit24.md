@@ -18,6 +18,6 @@ executed, so you may want to keep a copy around…</p>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="./bandit/tasks/bandit23.html">Level 23</a></div>
-<div style="text-align: right"><a href="./bandit/tasks/bandit25.html">Level 25</a></div>
+<div style="text-align: left"><a href="bandit23.html">Level 23</a></div>
+<div style="text-align: right"><a href="bandit25.html">Level 25</a></div>
 </html>

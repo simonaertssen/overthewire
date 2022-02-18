@@ -12,6 +12,6 @@ use SSH (on port 2220) to log into that level and continue the game.</p>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="./bandit/tasks/bandit0.html">Level 0</a></div>
-<div style="text-align: right"><a href="./bandit/tasks/bandit2.html">Level 2</a></div>
+<div style="text-align: left"><a href="bandit0.html">Level 0</a></div>
+<div style="text-align: right"><a href="bandit2.html">Level 2</a></div>
 </html>

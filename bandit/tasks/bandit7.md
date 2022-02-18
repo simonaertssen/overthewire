@@ -15,6 +15,6 @@ server</strong> and has all of the following properties:</p>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="./bandit/tasks/bandit6.html">Level 6</a></div>
-<div style="text-align: right"><a href="./bandit/tasks/bandit8.html">Level 8</a></div>
+<div style="text-align: left"><a href="bandit6.html">Level 6</a></div>
+<div style="text-align: right"><a href="bandit8.html">Level 8</a></div>
 </html>

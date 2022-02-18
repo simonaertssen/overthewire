@@ -11,6 +11,6 @@ the configuration and see what command is being executed.</p>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="./bandit/tasks/bandit21.html">Level 21</a></div>
-<div style="text-align: right"><a href="./bandit/tasks/bandit23.html">Level 23</a></div>
+<div style="text-align: left"><a href="bandit21.html">Level 21</a></div>
+<div style="text-align: right"><a href="bandit23.html">Level 23</a></div>
 </html>

@@ -15,6 +15,6 @@ and is the only line of text that occurs only once</p>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="./bandit/tasks/bandit8.html">Level 8</a></div>
-<div style="text-align: right"><a href="./bandit/tasks/bandit10.html">Level 10</a></div>
+<div style="text-align: left"><a href="bandit8.html">Level 8</a></div>
+<div style="text-align: right"><a href="bandit10.html">Level 10</a></div>
 </html>

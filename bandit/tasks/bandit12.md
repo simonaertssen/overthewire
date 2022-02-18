@@ -16,6 +16,6 @@ rotated by 13 positions</p>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="./bandit/tasks/bandit11.html">Level 11</a></div>
-<div style="text-align: right"><a href="./bandit/tasks/bandit13.html">Level 13</a></div>
+<div style="text-align: left"><a href="bandit11.html">Level 11</a></div>
+<div style="text-align: right"><a href="bandit13.html">Level 13</a></div>
 </html>

@@ -9,6 +9,6 @@ combinations, called brute-forcing.</p>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="./bandit/tasks/bandit24.html">Level 24</a></div>
-<div style="text-align: right"><a href="./bandit/tasks/bandit26.html">Level 26</a></div>
+<div style="text-align: left"><a href="bandit24.html">Level 24</a></div>
+<div style="text-align: right"><a href="bandit26.html">Level 26</a></div>
 </html>

@@ -15,6 +15,6 @@ which contains base64 encoded data</p>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="./bandit/tasks/bandit10.html">Level 10</a></div>
-<div style="text-align: right"><a href="./bandit/tasks/bandit12.html">Level 12</a></div>
+<div style="text-align: left"><a href="bandit10.html">Level 10</a></div>
+<div style="text-align: right"><a href="bandit12.html">Level 12</a></div>
 </html>

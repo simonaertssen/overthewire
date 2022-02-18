@@ -21,6 +21,6 @@ accurate, but good enough for beginners)</li>
 
 
 <h1>Solution</h1>
-<div style="text-align: left"><a href="./bandit/tasks/bandit14.html">Level 14</a></div>
-<div style="text-align: right"><a href="./bandit/tasks/bandit16.html">Level 16</a></div>
+<div style="text-align: left"><a href="bandit14.html">Level 14</a></div>
+<div style="text-align: right"><a href="bandit16.html">Level 16</a></div>
 </html>
