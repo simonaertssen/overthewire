@@ -13,10 +13,10 @@ def write_to_file(filename, contents):
 def read_bandit_page(levelnum):
     """Read a single bandit page."""
     # Open the right output file in the right directory
-    if not os.path.isdir('./bandit'):
-        os.mkdir('./bandit')
+    if not os.path.isdir('./bandit/tasks'):
+        os.mkdir('./bandit/tasks')
 
-    filename = f'./bandit/bandit{levelnum}.html'
+    filename = f'./bandit/tasks/bandit{levelnum}.html'
     f = open(filename, 'w')
     f.write('<html>\n')
 
