@@ -1,17 +1,7 @@
 ```
-user@host:~$ ssh bandit9@bandit.labs.overthewire.org -p 2220
-UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+user@host:~$ ssh bandit8@bandit.labs.overthewire.org -p 2220
+cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 
-bandit9@bandit:~$ strings data.txt | grep '='
-========== the*2i"4
-=:G e
-========== password
-<I=zsGi
-Z)========== is
-A=|t&E
-Zdb=
-c^ LAh=3G
-*SF=s
-&========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
-S=A.H&^
+bandit8@bandit:~$ cat data.txt | sort | uniq -u
+UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 ```
