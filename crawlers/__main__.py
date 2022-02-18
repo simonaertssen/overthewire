@@ -16,7 +16,7 @@ def read_bandit_page(levelnum):
     if not os.path.isdir('./bandit/tasks'):
         os.mkdir('./bandit/tasks')
 
-    filename = f'./bandit/tasks/bandit{levelnum}.html'
+    filename = f'./bandit/tasks/bandit{levelnum}.md'
     f = open(filename, 'w')
     f.write('<html>\n')
 
@@ -40,51 +40,17 @@ def read_bandit_page(levelnum):
         if line.decode("utf-8").endswith('</p>'):
             break
 
-    # Read helpful commands
-    commands = b'<h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>'
+    # Read helpful commands and material until end of info
     while True:
         line = next(content)
-        if line == commands:
-            break
-    f.write(line.decode("utf-8") + '\n')
-    f.write(next(content).decode("utf-8") + '\n')
-
-    return
-    taskdescr = b'< h2 id = "commands-you-may-need-to-solve-this-level" > Commands you may need to solve this level < /h2 >'
-    while True:
-        line = next(content)
-        if not line:
-            continue
-        if line == lookfor:
+        if line == b'</div>':
             break
         f.write(line.decode("utf-8") + '\n')
-
-    # # Read helpful commands (if exists)
-    # lookfor = b'<h2 id="helpful-reading-material">Helpful Reading Material</h2>'
-    # while True:
-    #     line = next(content)
-    #     if not line:
-    #         continue
-    #     if line == lookfor:
-    #         break
-    #     f.write(line.decode("utf-8") + '\n')
-
-    # lookfor = b'</ul>'
-    # while True:
-    #     line = next(content)
-    #     if not line:
-    #         continue
-    #     if line == lookfor:
-    #         break
-    #     f.write(line.decode("utf-8") + '\n')
-
-    # Get last line
-    # f.write(line.decode("utf-8") + '\n')
 
     # End the file and close it
     f.write('</html>')
     f.close()
-    return 0
+    return
 
 
 def crawl_bandit():
