@@ -15,6 +15,7 @@ the <strong>inhere</strong> directory and has all of the following properties:</
 
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit5@bandit.labs.overthewire.org -p 2220
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh

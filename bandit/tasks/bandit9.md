@@ -15,6 +15,7 @@ and is the only line of text that occurs only once</p>
 
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit8@bandit.labs.overthewire.org -p 2220
 cvX2JJa4CFALtqS87jk27qwqGhBM9plV

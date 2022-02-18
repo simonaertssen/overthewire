@@ -20,6 +20,7 @@ cp, mv, file</p>
 
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit12@bandit.labs.overthewire.org -p 2220
 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu

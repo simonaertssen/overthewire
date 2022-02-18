@@ -16,6 +16,7 @@ rotated by 13 positions</p>
 
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit11@bandit.labs.overthewire.org -p 2220
 IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR

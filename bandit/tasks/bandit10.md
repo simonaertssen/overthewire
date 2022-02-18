@@ -11,6 +11,7 @@ characters.</p>
 
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit9@bandit.labs.overthewire.org -p 2220
 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR

@@ -16,6 +16,7 @@ located in the home directory</p>
 
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit1@bandit.labs.overthewire.org -p 2220
 boJ9jbbUNNfktd78OOpsqOltutMc3MY1

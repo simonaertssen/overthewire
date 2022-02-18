@@ -10,6 +10,7 @@
 
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit3@bandit.labs.overthewire.org -p 2220
 UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK

@@ -19,6 +19,13 @@ others will simply send back to you whatever you send to it.</p>
 
 
 <h1>Solution</h1>
+
+```
+user@host:~$ ssh bandit16@bandit.labs.overthewire.org -p 2220
+cluFn7wTiGryunymYOu4RcffSxQluehd
+
+```
+
 <div style="text-align: left"><a href="./bandit16.md">Level 16</a></div>
 <div style="text-align: right"><a href="./bandit18.md">Level 18</a></div>
 </html>

@@ -75,5 +75,5 @@ BfMYroe26WYalil77FoDi9qh59eK5xNr
 Correct!
 cluFn7wTiGryunymYOu4RcffSxQluehd
 
-closed=
+closed
 ```

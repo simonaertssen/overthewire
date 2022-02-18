@@ -12,6 +12,7 @@ use SSH (on port 2220) to log into that level and continue the game.</p>
 
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit0@bandit.labs.overthewire.org -p 2220
 bandit0

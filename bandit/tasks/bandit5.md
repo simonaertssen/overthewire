@@ -11,6 +11,7 @@ up, try the “reset” command.</p>
 
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit4@bandit.labs.overthewire.org -p 2220
 pIwrPrtPN36QITSp3EQaw936yaFoFgAB

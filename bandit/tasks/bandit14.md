@@ -19,6 +19,7 @@ you are working on</p>
 
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit13@bandit.labs.overthewire.org -p 2220
 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL

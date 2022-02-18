@@ -22,6 +22,7 @@ that command…</strong></p>
 
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit15@bandit.labs.overthewire.org -p 2220
 BfMYroe26WYalil77FoDi9qh59eK5xNr
@@ -99,7 +100,7 @@ BfMYroe26WYalil77FoDi9qh59eK5xNr
 Correct!
 cluFn7wTiGryunymYOu4RcffSxQluehd
 
-closed=
+closed
 ```
 
 <div style="text-align: left"><a href="./bandit15.md">Level 15</a></div>

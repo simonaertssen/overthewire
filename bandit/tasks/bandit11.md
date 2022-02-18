@@ -15,6 +15,7 @@ which contains base64 encoded data</p>
 
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit10@bandit.labs.overthewire.org -p 2220
 truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk

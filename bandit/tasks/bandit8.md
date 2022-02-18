@@ -9,6 +9,7 @@ next to the word <strong>millionth</strong></p>
 <p>grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd</p>
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit7@bandit.labs.overthewire.org -p 2220
 HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs

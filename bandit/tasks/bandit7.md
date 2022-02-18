@@ -15,6 +15,7 @@ server</strong> and has all of the following properties:</p>
 
 
 <h1>Solution</h1>
+
 ```
 user@host:~$ ssh bandit6@bandit.labs.overthewire.org -p 2220
 DXjZPULLxYr17uwoI01bNLQbtFemEgo7

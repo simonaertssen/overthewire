@@ -17,6 +17,7 @@ works as you think</p>
 
 
 <h1>Solution</h1>
+
 <div style="text-align: left"><a href="./bandit20.md">Level 20</a></div>
 <div style="text-align: right"><a href="./bandit22.md">Level 22</a></div>
 </html>
