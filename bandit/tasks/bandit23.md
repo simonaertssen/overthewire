@@ -15,4 +15,7 @@ try executing it to see the debug information it prints.</p>
 <p>cron, crontab, crontab(5) (use “man 5 crontab” to access this)</p>
 
 
+<h1>Solution</h1>
+<div style="text-align: left"><a href="./bandit/tasks/bandit22.html">Level 22</a></div>
+<div style="text-align: right"><a href="./bandit/tasks/bandit24.html">Level 24</a></div>
 </html>

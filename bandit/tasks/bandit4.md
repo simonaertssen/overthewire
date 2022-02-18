@@ -9,4 +9,7 @@
 <p>ls, cd, cat, file, du, find</p>
 
 
+<h1>Solution</h1>
+<div style="text-align: left"><a href="./bandit/tasks/bandit3.html">Level 3</a></div>
+<div style="text-align: right"><a href="./bandit/tasks/bandit5.html">Level 5</a></div>
 </html>

@@ -10,4 +10,7 @@ to log you out when you log in with SSH.</p>
 <p>ssh, ls, cat</p>
 
 
+<h1>Solution</h1>
+<div style="text-align: left"><a href="./bandit/tasks/bandit18.html">Level 18</a></div>
+<div style="text-align: right"><a href="./bandit/tasks/bandit20.html">Level 20</a></div>
 </html>

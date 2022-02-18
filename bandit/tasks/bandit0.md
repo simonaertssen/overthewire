@@ -19,4 +19,6 @@ logged in, go to the <a href="/wargames/bandit/bandit1.html">Level 1</a> page to
 </ul>
 
 
+<h1>Solution</h1>
+<div style="text-align: right"><a href="./bandit/tasks/bandit1.html">Level 1</a></div>
 </html>

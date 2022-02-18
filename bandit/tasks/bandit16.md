@@ -21,4 +21,7 @@ that command…</strong></p>
 </ul>
 
 
+<h1>Solution</h1>
+<div style="text-align: left"><a href="./bandit/tasks/bandit15.html">Level 15</a></div>
+<div style="text-align: right"><a href="./bandit/tasks/bandit17.html">Level 17</a></div>
 </html>

@@ -17,4 +17,7 @@ executed, so you may want to keep a copy around…</p>
 <p>cron, crontab, crontab(5) (use “man 5 crontab” to access this)</p>
 
 
+<h1>Solution</h1>
+<div style="text-align: left"><a href="./bandit/tasks/bandit23.html">Level 23</a></div>
+<div style="text-align: right"><a href="./bandit/tasks/bandit25.html">Level 25</a></div>
 </html>

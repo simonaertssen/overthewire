@@ -14,4 +14,7 @@ to log into bandit18, this is related to the next level, bandit19</strong></p>
 <p>cat, grep, ls, diff</p>
 
 
+<h1>Solution</h1>
+<div style="text-align: left"><a href="./bandit/tasks/bandit17.html">Level 17</a></div>
+<div style="text-align: right"><a href="./bandit/tasks/bandit19.html">Level 19</a></div>
 </html>

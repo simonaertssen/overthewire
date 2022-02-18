@@ -18,4 +18,7 @@ others will simply send back to you whatever you send to it.</p>
 </ul>
 
 
+<h1>Solution</h1>
+<div style="text-align: left"><a href="./bandit/tasks/bandit16.html">Level 16</a></div>
+<div style="text-align: right"><a href="./bandit/tasks/bandit18.html">Level 18</a></div>
 </html>

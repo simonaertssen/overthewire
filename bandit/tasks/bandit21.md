@@ -16,4 +16,7 @@ works as you think</p>
 <p>ssh, nc, cat, bash, screen, tmux, Unix ‘job control’ (bg, fg, jobs, &amp;, CTRL-Z, …)</p>
 
 
+<h1>Solution</h1>
+<div style="text-align: left"><a href="./bandit/tasks/bandit20.html">Level 20</a></div>
+<div style="text-align: right"><a href="./bandit/tasks/bandit22.html">Level 22</a></div>
 </html>

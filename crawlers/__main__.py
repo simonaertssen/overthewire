@@ -27,11 +27,12 @@ def read_bandit_page(levelnum):
 
     # Read until level title
     title = f'<script>renderLevelTitle("bandit", {levelnum});</script>'.encode()
-    f.write(f'<h1>Bandit {levelnum}</h1>\n')
     while True:
         line = next(content)
         if line == title:
             break
+
+    f.write(f'<h1>Bandit {levelnum}</h1>\n')
 
     # Read task description
     while True:
@@ -47,8 +48,16 @@ def read_bandit_page(levelnum):
             break
         f.write(line.decode("utf-8") + '\n')
 
+    # Pull the solution on print to the same file as well
+    f.write('<h1>Solution</h1>\n')
+
+    # Write previous and next level to the bottom of the page
+    if levelnum > 0:
+        f.write(f'<div style="text-align: left"><a href="./bandit/tasks/bandit{levelnum - 1}.html">Level {levelnum - 1}</a></div>\n')
+    f.write(f'<div style="text-align: right"><a href="./bandit/tasks/bandit{levelnum + 1}.html">Level {levelnum + 1}</a></div>\n')
+
     # End the file and close it
-    f.write('</html>')
+    f.write('</html>\n')
     f.close()
     return
 

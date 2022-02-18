@@ -14,4 +14,7 @@ in this filename</strong> located in the home directory</p>
 </ul>
 
 
+<h1>Solution</h1>
+<div style="text-align: left"><a href="./bandit/tasks/bandit2.html">Level 2</a></div>
+<div style="text-align: right"><a href="./bandit/tasks/bandit4.html">Level 4</a></div>
 </html>
