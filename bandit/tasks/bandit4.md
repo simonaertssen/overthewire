@@ -25,6 +25,6 @@ bandit3@bandit:~$ cat inhere/.hidden
 pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 ```
 
-<div style="text-align: left"><a href="bandit3.md">Level 3</a></div>
-<div style="text-align: right"><a href="bandit5.md">Level 5</a></div>
+<div style="text-align: left"><a href="./bandit3.md">Level 3</a></div>
+<div style="text-align: right"><a href="./bandit5.md">Level 5</a></div>
 </html>

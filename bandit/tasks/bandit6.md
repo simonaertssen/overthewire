@@ -30,6 +30,6 @@ bandit5@bandit:~$ cat ./inhere/maybehere07/.file2
 DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 ```
 
-<div style="text-align: left"><a href="bandit5.md">Level 5</a></div>
-<div style="text-align: right"><a href="bandit7.md">Level 7</a></div>
+<div style="text-align: left"><a href="./bandit5.md">Level 5</a></div>
+<div style="text-align: right"><a href="./bandit7.md">Level 7</a></div>
 </html>

@@ -20,6 +20,6 @@ bandit0@bandit:~$ head readme
 boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 ```
 
-<div style="text-align: left"><a href="bandit0.md">Level 0</a></div>
-<div style="text-align: right"><a href="bandit2.md">Level 2</a></div>
+<div style="text-align: left"><a href="./bandit0.md">Level 0</a></div>
+<div style="text-align: right"><a href="./bandit2.md">Level 2</a></div>
 </html>

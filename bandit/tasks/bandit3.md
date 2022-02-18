@@ -25,6 +25,6 @@ bandit2@bandit:~$ cat < spaces\ in\ this\ filename
 UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 ```
 
-<div style="text-align: left"><a href="bandit2.md">Level 2</a></div>
-<div style="text-align: right"><a href="bandit4.md">Level 4</a></div>
+<div style="text-align: left"><a href="./bandit2.md">Level 2</a></div>
+<div style="text-align: right"><a href="./bandit4.md">Level 4</a></div>
 </html>
