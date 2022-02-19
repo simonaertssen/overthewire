@@ -11,5 +11,5 @@ the configuration and see what command is being executed.</p>
 
 <h1>Solution</h1>
 
-<a href="bandit/tasks/bandit21.md">Level 21</a>
-<a href="bandit/tasks/bandit23.md">Level 23</a>
+<a href="bandit21.md">Level 21</a>
+<a href="bandit23.md">Level 23</a>

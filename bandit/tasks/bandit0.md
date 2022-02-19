@@ -18,4 +18,4 @@ logged in, go to the <a href="/wargames/bandit/bandit1.html">Level 1</a> page to
 </ul>
 
 
-<a href="bandit/tasks/bandit1.md">Level 1</a>
+<a href="bandit1.md">Level 1</a>

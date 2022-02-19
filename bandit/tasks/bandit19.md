@@ -42,5 +42,5 @@ $ cat readme
 IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
 ```
 
-<a href="bandit/tasks/bandit18.md">Level 18</a>
-<a href="bandit/tasks/bandit20.md">Level 20</a>
+<a href="bandit18.md">Level 18</a>
+<a href="bandit20.md">Level 20</a>

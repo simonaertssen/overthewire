@@ -102,5 +102,5 @@ cluFn7wTiGryunymYOu4RcffSxQluehd
 closed
 ```
 
-<a href="bandit/tasks/bandit15.md">Level 15</a>
-<a href="bandit/tasks/bandit17.md">Level 17</a>
+<a href="bandit15.md">Level 15</a>
+<a href="bandit17.md">Level 17</a>

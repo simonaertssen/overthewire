@@ -26,5 +26,5 @@ bandit1@bandit:~$ cat < -
 CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
 ```
 
-<a href="bandit/tasks/bandit1.md">Level 1</a>
-<a href="bandit/tasks/bandit3.md">Level 3</a>
+<a href="bandit1.md">Level 1</a>
+<a href="bandit3.md">Level 3</a>

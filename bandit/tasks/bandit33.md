@@ -7,5 +7,5 @@
 
 <h1>Solution</h1>
 
-<a href="bandit/tasks/bandit32.md">Level 32</a>
-<a href="bandit/tasks/bandit34.md">Level 34</a>
+<a href="bandit32.md">Level 32</a>
+<a href="bandit34.md">Level 34</a>

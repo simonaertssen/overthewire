@@ -17,5 +17,5 @@ works as you think</p>
 
 <h1>Solution</h1>
 
-<a href="bandit/tasks/bandit20.md">Level 20</a>
-<a href="bandit/tasks/bandit22.md">Level 22</a>
+<a href="bandit20.md">Level 20</a>
+<a href="bandit22.md">Level 22</a>

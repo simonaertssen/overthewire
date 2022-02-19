@@ -17,5 +17,5 @@ bandit7@bandit:~$ grep millionth data.txt
 millionth       cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 ```
 
-<a href="bandit/tasks/bandit7.md">Level 7</a>
-<a href="bandit/tasks/bandit9.md">Level 9</a>
+<a href="bandit7.md">Level 7</a>
+<a href="bandit9.md">Level 9</a>

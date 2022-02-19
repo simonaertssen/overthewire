@@ -18,5 +18,5 @@ executed, so you may want to keep a copy around…</p>
 
 <h1>Solution</h1>
 
-<a href="bandit/tasks/bandit23.md">Level 23</a>
-<a href="bandit/tasks/bandit25.md">Level 25</a>
+<a href="bandit23.md">Level 23</a>
+<a href="bandit25.md">Level 25</a>
