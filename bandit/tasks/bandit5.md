@@ -35,6 +35,6 @@ bandit4@bandit:~$ cat inhere/-file07
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 ```
 
-[Level 4](bandit/tasks/bandit4.md)
-[Level 6](bandit/tasks/bandit6.md)
+[Level 4](bandit4.md)
+[Level 6](bandit6.md)
 </html>

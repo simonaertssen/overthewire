@@ -61,8 +61,8 @@ def read_bandit_page(levelnum):
     # f.write(f'<p style="text-align: right"><a href="bandit/tasks/bandit{levelnum + 1}.md">Level {levelnum + 1}</a></p>\n')
 
     if levelnum > 0:
-        f.write(f'[Level {levelnum - 1}](bandit/tasks/bandit{levelnum - 1}.md)\n')
-    f.write(f'[Level {levelnum + 1}](bandit/tasks/bandit{levelnum + 1}.md)\n')
+        f.write(f'[Level {levelnum - 1}](bandit{levelnum - 1}.md)\n')
+    f.write(f'[Level {levelnum + 1}](bandit{levelnum + 1}.md)\n')
 
     # End the file and close it
     f.write('</html>\n')

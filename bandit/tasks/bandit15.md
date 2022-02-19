@@ -31,6 +31,6 @@ Correct!
 BfMYroe26WYalil77FoDi9qh59eK5xNr
 ```
 
-[Level 14](bandit/tasks/bandit14.md)
-[Level 16](bandit/tasks/bandit16.md)
+[Level 14](bandit14.md)
+[Level 16](bandit16.md)
 </html>

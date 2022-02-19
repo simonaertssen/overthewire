@@ -8,6 +8,6 @@
 
 <h1>Solution</h1>
 
-[Level 32](bandit/tasks/bandit32.md)
-[Level 34](bandit/tasks/bandit34.md)
+[Level 32](bandit32.md)
+[Level 34](bandit34.md)
 </html>

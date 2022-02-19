@@ -21,6 +21,6 @@ bandit0@bandit:~$ head readme
 boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 ```
 
-[Level 0](bandit/tasks/bandit0.md)
-[Level 2](bandit/tasks/bandit2.md)
+[Level 0](bandit0.md)
+[Level 2](bandit2.md)
 </html>

@@ -24,6 +24,6 @@ bandit8@bandit:~$ cat data.txt | sort | uniq -u
 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 ```
 
-[Level 8](bandit/tasks/bandit8.md)
-[Level 10](bandit/tasks/bandit10.md)
+[Level 8](bandit8.md)
+[Level 10](bandit10.md)
 </html>

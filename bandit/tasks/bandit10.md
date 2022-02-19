@@ -30,6 +30,6 @@ c^ LAh=3G
 S=A.H&^
 ```
 
-[Level 9](bandit/tasks/bandit9.md)
-[Level 11](bandit/tasks/bandit11.md)
+[Level 9](bandit9.md)
+[Level 11](bandit11.md)
 </html>

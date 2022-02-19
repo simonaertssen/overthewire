@@ -18,6 +18,6 @@ works as you think</p>
 
 <h1>Solution</h1>
 
-[Level 20](bandit/tasks/bandit20.md)
-[Level 22](bandit/tasks/bandit22.md)
+[Level 20](bandit20.md)
+[Level 22](bandit22.md)
 </html>

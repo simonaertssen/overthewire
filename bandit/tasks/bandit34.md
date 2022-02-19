@@ -5,6 +5,6 @@
 
 <h1>Solution</h1>
 
-[Level 33](bandit/tasks/bandit33.md)
-[Level 35](bandit/tasks/bandit35.md)
+[Level 33](bandit33.md)
+[Level 35](bandit35.md)
 </html>

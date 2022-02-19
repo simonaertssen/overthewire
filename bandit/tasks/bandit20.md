@@ -15,6 +15,11 @@ place (/etc/bandit_pass), after you have used the setuid binary.</p>
 
 <h1>Solution</h1>
 
-[Level 19](bandit/tasks/bandit19.md)
-[Level 21](bandit/tasks/bandit21.md)
+```
+user@host:~$ ssh bandit19@bandit.labs.overthewire.org -p 2220
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+```
+
+[Level 19](bandit19.md)
+[Level 21](bandit21.md)
 </html>
