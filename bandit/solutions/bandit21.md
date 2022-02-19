@@ -19,13 +19,10 @@ PORT      STATE SERVICE
 30000/tcp open  ndmps
 
 Nmap done: 1 IP address (1 host up) scanned in 0.10 seconds
-bandit20@bandit:~$ ./suconnect 30000/tcp
-getaddrinfo: Servname not supported for ai_socktype
 bandit20@bandit:~$ ./suconnect 30000
-GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 ^C
 bandit20@bandit:~$ ./suconnect 113
-^[[A^[[A^C
+^C
 bandit20@bandit:~$ ./suconnect 22
 Read: SSH-2.0-OpenSSH_7.4p1
 ERROR: This doesn't match the current password!

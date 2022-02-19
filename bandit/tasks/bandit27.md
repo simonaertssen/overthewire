@@ -8,4 +8,8 @@
 
 <h1>Solution</h1>
 
+```
+user@host:~$ ssh bandit26@bandit.labs.overthewire.org -p 2220
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+```
 <a href="bandit26.md">Level 26</a>             <a href="bandit28.md">Level 28</a>

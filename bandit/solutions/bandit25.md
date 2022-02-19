@@ -1,14 +1,3 @@
-<h1>Bandit 25</h1>
-
-<h2 id="level-goal">Level Goal</h2>
-<p>A daemon is listening on port 30002 and will give you the password for
-bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode.
-There is no way to retrieve the pincode except by going through all of the 10000
-combinations, called brute-forcing.</p>
-
-
-<h1>Solution</h1>
-
 ```
 user@host:~$ ssh bandit24@bandit.labs.overthewire.org -p 2220
 UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
@@ -46,5 +35,3 @@ The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
 
 Exiting.
 ```
-
-<a href="bandit24.md">Level 24</a>             <a href="bandit26.md">Level 26</a>
