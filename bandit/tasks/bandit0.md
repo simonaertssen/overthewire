@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 0</h1>
 
 <h2 id="level-goal">Level Goal</h2>
@@ -20,4 +19,3 @@ logged in, go to the <a href="/wargames/bandit/bandit1.html">Level 1</a> page to
 
 
 <a href="bandit/tasks/bandit1.md">Level 1</a>
-</html>

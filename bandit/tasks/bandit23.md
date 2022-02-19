@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 23</h1>
 
 <h2 id="level-goal">Level Goal</h2>
@@ -19,4 +18,3 @@ try executing it to see the debug information it prints.</p>
 
 <a href="bandit/tasks/bandit22.md">Level 22</a>
 <a href="bandit/tasks/bandit24.md">Level 24</a>
-</html>

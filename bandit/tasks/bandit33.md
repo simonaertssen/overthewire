@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 33</h1>
 
 <p>After all this <code class="language-plaintext highlighter-rouge">git</code> stuff its time for another escape. Good luck!</p>
@@ -10,4 +9,3 @@
 
 <a href="bandit/tasks/bandit32.md">Level 32</a>
 <a href="bandit/tasks/bandit34.md">Level 34</a>
-</html>

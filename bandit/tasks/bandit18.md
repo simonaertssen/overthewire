@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 18</h1>
 
 <h2 id="level-goal">Level Goal</h2>
@@ -31,4 +30,3 @@ bandit17@bandit:~$ diff passwords.old passwords.new
 
 <a href="bandit/tasks/bandit17.md">Level 17</a>
 <a href="bandit/tasks/bandit19.md">Level 19</a>
-</html>

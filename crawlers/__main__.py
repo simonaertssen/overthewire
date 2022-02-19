@@ -18,7 +18,7 @@ def read_bandit_page(levelnum):
 
     filename = f'./bandit/tasks/bandit{levelnum}.md'
     f = open(filename, 'w')
-    f.write('<html>\n')
+    # f.write('<html>\n')
 
     # Fetch url contents
     url = "https://overthewire.org/wargames/bandit/"
@@ -61,7 +61,7 @@ def read_bandit_page(levelnum):
     f.write(f'<a href="bandit/tasks/bandit{levelnum + 1}.md">Level {levelnum + 1}</a>\n')
 
     # End the file and close it
-    f.write('</html>\n')
+    # f.write('</html>\n')
     f.close()
     return
 

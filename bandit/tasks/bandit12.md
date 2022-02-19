@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 12</h1>
 
 <h2 id="level-goal">Level Goal</h2>
@@ -30,4 +29,3 @@ bandit11@bandit:~$
 
 <a href="bandit/tasks/bandit11.md">Level 11</a>
 <a href="bandit/tasks/bandit13.md">Level 13</a>
-</html>

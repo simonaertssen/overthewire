@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 6</h1>
 
 <h2 id="level-goal">Level Goal</h2>
@@ -33,4 +32,3 @@ DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 
 <a href="bandit/tasks/bandit5.md">Level 5</a>
 <a href="bandit/tasks/bandit7.md">Level 7</a>
-</html>

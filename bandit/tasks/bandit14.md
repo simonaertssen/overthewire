@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 14</h1>
 
 <h2 id="level-goal">Level Goal</h2>
@@ -47,4 +46,3 @@ Interesting how we can pass through machines like that. I guess I didn't have to
 
 <a href="bandit/tasks/bandit13.md">Level 13</a>
 <a href="bandit/tasks/bandit15.md">Level 15</a>
-</html>

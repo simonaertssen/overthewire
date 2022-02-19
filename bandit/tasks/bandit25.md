@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 25</h1>
 
 <h2 id="level-goal">Level Goal</h2>
@@ -12,4 +11,3 @@ combinations, called brute-forcing.</p>
 
 <a href="bandit/tasks/bandit24.md">Level 24</a>
 <a href="bandit/tasks/bandit26.md">Level 26</a>
-</html>

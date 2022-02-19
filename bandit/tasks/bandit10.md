@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 10</h1>
 
 <h2 id="level-goal">Level Goal</h2>
@@ -32,4 +31,3 @@ S=A.H&^
 
 <a href="bandit/tasks/bandit9.md">Level 9</a>
 <a href="bandit/tasks/bandit11.md">Level 11</a>
-</html>

@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 13</h1>
 
 <h2 id="level-goal">Level Goal</h2>
@@ -72,4 +71,3 @@ This was an annoying level.
 
 <a href="bandit/tasks/bandit12.md">Level 12</a>
 <a href="bandit/tasks/bandit14.md">Level 14</a>
-</html>

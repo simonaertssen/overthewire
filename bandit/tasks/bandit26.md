@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 26</h1>
 
 <h2 id="level-goal">Level Goal</h2>
@@ -14,4 +13,3 @@ Find out what it is, how it works and how to break out of it.</p>
 
 <a href="bandit/tasks/bandit25.md">Level 25</a>
 <a href="bandit/tasks/bandit27.md">Level 27</a>
-</html>

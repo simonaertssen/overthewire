@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 22</h1>
 
 <h2 id="level-goal">Level Goal</h2>
@@ -14,4 +13,3 @@ the configuration and see what command is being executed.</p>
 
 <a href="bandit/tasks/bandit21.md">Level 21</a>
 <a href="bandit/tasks/bandit23.md">Level 23</a>
-</html>

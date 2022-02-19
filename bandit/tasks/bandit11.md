@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 11</h1>
 
 <h2 id="level-goal">Level Goal</h2>
@@ -28,4 +27,3 @@ The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 
 <a href="bandit/tasks/bandit10.md">Level 10</a>
 <a href="bandit/tasks/bandit12.md">Level 12</a>
-</html>

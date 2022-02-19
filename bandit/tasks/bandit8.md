@@ -1,4 +1,3 @@
-<html>
 <h1>Bandit 8</h1>
 
 <h2 id="level-goal">Level Goal</h2>
@@ -20,4 +19,3 @@ millionth       cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 
 <a href="bandit/tasks/bandit7.md">Level 7</a>
 <a href="bandit/tasks/bandit9.md">Level 9</a>
-</html>
