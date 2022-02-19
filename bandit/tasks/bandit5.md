@@ -35,6 +35,6 @@ bandit4@bandit:~$ cat inhere/-file07
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 ```
 
-<div style="text-align: left"><a href="bandit/tasks/bandit4.md">Level 4</a></div>
-<div style="text-align: right"><a href="bandit/tasks/bandit6.md">Level 6</a></div>
+<p style="text-align: left"><a href="bandit/tasks/bandit4.md">Level 4</a></p>
+<p style="text-align: right"><a href="bandit/tasks/bandit6.md">Level 6</a></p>
 </html>
