@@ -10,6 +10,6 @@ combinations, called brute-forcing.</p>
 
 <h1>Solution</h1>
 
-[Level 24](bandit24.md)
-[Level 26](bandit26.md)
+<a href="bandit/tasks/bandit24.md">Level 24</a>
+<a href="bandit/tasks/bandit26.md">Level 26</a>
 </html>

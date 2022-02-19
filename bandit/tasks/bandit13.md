@@ -70,6 +70,6 @@ The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 
 This was an annoying level.
 
-[Level 12](bandit12.md)
-[Level 14](bandit14.md)
+<a href="bandit/tasks/bandit12.md">Level 12</a>
+<a href="bandit/tasks/bandit14.md">Level 14</a>
 </html>

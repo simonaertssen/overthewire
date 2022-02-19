@@ -26,6 +26,6 @@ bandit3@bandit:~$ cat inhere/.hidden
 pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 ```
 
-[Level 3](bandit3.md)
-[Level 5](bandit5.md)
+<a href="bandit/tasks/bandit3.md">Level 3</a>
+<a href="bandit/tasks/bandit5.md">Level 5</a>
 </html>

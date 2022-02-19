@@ -26,6 +26,6 @@ bandit10@bandit:~$ base64 -d data.txt
 The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 ```
 
-[Level 10](bandit10.md)
-[Level 12](bandit12.md)
+<a href="bandit/tasks/bandit10.md">Level 10</a>
+<a href="bandit/tasks/bandit12.md">Level 12</a>
 </html>

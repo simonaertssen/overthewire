@@ -20,6 +20,6 @@ user@host:~$ ssh bandit19@bandit.labs.overthewire.org -p 2220
 IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
 ```
 
-[Level 19](bandit19.md)
-[Level 21](bandit21.md)
+<a href="bandit/tasks/bandit19.md">Level 19</a>
+<a href="bandit/tasks/bandit21.md">Level 21</a>
 </html>
