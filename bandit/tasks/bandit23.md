@@ -17,6 +17,6 @@ try executing it to see the debug information it prints.</p>
 
 <h1>Solution</h1>
 
-<div style="text-align: left"><a href="./bandit22.md">Level 22</a></div>
-<div style="text-align: right"><a href="./bandit24.md">Level 24</a></div>
+<div style="text-align: left"><a href="bandit/tasks/bandit22.md">Level 22</a></div>
+<div style="text-align: right"><a href="bandit/tasks/bandit24.md">Level 24</a></div>
 </html>

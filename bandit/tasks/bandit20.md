@@ -15,6 +15,6 @@ place (/etc/bandit_pass), after you have used the setuid binary.</p>
 
 <h1>Solution</h1>
 
-<div style="text-align: left"><a href="./bandit19.md">Level 19</a></div>
-<div style="text-align: right"><a href="./bandit21.md">Level 21</a></div>
+<div style="text-align: left"><a href="bandit/tasks/bandit19.md">Level 19</a></div>
+<div style="text-align: right"><a href="bandit/tasks/bandit21.md">Level 21</a></div>
 </html>

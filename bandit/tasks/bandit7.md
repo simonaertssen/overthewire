@@ -83,6 +83,6 @@ bandit6@bandit:~$ cat /var/lib/dpkg/info/bandit7.password
 HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
 ```
 
-<div style="text-align: left"><a href="./bandit6.md">Level 6</a></div>
-<div style="text-align: right"><a href="./bandit8.md">Level 8</a></div>
+<div style="text-align: left"><a href="bandit/tasks/bandit6.md">Level 6</a></div>
+<div style="text-align: right"><a href="bandit/tasks/bandit8.md">Level 8</a></div>
 </html>

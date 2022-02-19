@@ -31,6 +31,6 @@ Correct!
 BfMYroe26WYalil77FoDi9qh59eK5xNr
 ```
 
-<div style="text-align: left"><a href="./bandit14.md">Level 14</a></div>
-<div style="text-align: right"><a href="./bandit16.md">Level 16</a></div>
+<div style="text-align: left"><a href="bandit/tasks/bandit14.md">Level 14</a></div>
+<div style="text-align: right"><a href="bandit/tasks/bandit16.md">Level 16</a></div>
 </html>

@@ -5,6 +5,6 @@
 
 <h1>Solution</h1>
 
-<div style="text-align: left"><a href="./bandit33.md">Level 33</a></div>
-<div style="text-align: right"><a href="./bandit35.md">Level 35</a></div>
+<div style="text-align: left"><a href="bandit/tasks/bandit33.md">Level 33</a></div>
+<div style="text-align: right"><a href="bandit/tasks/bandit35.md">Level 35</a></div>
 </html>

@@ -8,6 +8,6 @@
 
 <h1>Solution</h1>
 
-<div style="text-align: left"><a href="./bandit32.md">Level 32</a></div>
-<div style="text-align: right"><a href="./bandit34.md">Level 34</a></div>
+<div style="text-align: left"><a href="bandit/tasks/bandit32.md">Level 32</a></div>
+<div style="text-align: right"><a href="bandit/tasks/bandit34.md">Level 34</a></div>
 </html>
