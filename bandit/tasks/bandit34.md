@@ -4,5 +4,4 @@
 
 <h1>Solution</h1>
 
-<a href="bandit33.md">Level 33</a>
-<a href="bandit35.md">Level 35</a>
+<a href="bandit33.md">Level 33</a>             <a href="bandit35.md">Level 35</a>

@@ -27,5 +27,4 @@ The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 bandit11@bandit:~$
 ```
 
-<a href="bandit11.md">Level 11</a>
-<a href="bandit13.md">Level 13</a>
+<a href="bandit11.md">Level 11</a>             <a href="bandit13.md">Level 13</a>

@@ -29,5 +29,4 @@ c^ LAh=3G
 S=A.H&^
 ```
 
-<a href="bandit9.md">Level 9</a>
-<a href="bandit11.md">Level 11</a>
+<a href="bandit9.md">Level 9</a>             <a href="bandit11.md">Level 11</a>

@@ -30,5 +30,4 @@ Correct!
 BfMYroe26WYalil77FoDi9qh59eK5xNr
 ```
 
-<a href="bandit14.md">Level 14</a>
-<a href="bandit16.md">Level 16</a>
+<a href="bandit14.md">Level 14</a>             <a href="bandit16.md">Level 16</a>

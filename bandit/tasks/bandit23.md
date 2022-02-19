@@ -16,5 +16,9 @@ try executing it to see the debug information it prints.</p>
 
 <h1>Solution</h1>
 
-<a href="bandit22.md">Level 22</a>
-<a href="bandit24.md">Level 24</a>
+```
+user@host:~$ ssh bandit22@bandit.labs.overthewire.org -p 2220
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+
+```
+<a href="bandit22.md">Level 22</a>             <a href="bandit24.md">Level 24</a>

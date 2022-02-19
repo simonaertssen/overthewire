@@ -57,7 +57,7 @@ def read_bandit_page(levelnum):
 
     # Write previous and next level to the bottom of the page
     if levelnum > 0:
-        f.write(f'<a href="bandit{levelnum - 1}.md">Level {levelnum - 1}</a>\n')
+        f.write(f'<a href="bandit{levelnum - 1}.md">Level {levelnum - 1}</a>             ')
     f.write(f'<a href="bandit{levelnum + 1}.md">Level {levelnum + 1}</a>\n')
 
     # End the file and close it
