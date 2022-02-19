@@ -12,6 +12,12 @@ to log you out when you log in with SSH.</p>
 
 <h1>Solution</h1>
 
-<p style="text-align: left"><a href="bandit/tasks/bandit18.md">Level 18</a></p>
-<p style="text-align: right"><a href="bandit/tasks/bandit20.md">Level 20</a></p>
+```
+user@host:~$ ssh bandit18@bandit.labs.overthewire.org -p 2220
+kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+
+```
+
+[Level 18](bandit/tasks/bandit18.md)
+[Level 20](bandit/tasks/bandit20.md)
 </html>

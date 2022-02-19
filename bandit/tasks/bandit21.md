@@ -18,6 +18,6 @@ works as you think</p>
 
 <h1>Solution</h1>
 
-<p style="text-align: left"><a href="bandit/tasks/bandit20.md">Level 20</a></p>
-<p style="text-align: right"><a href="bandit/tasks/bandit22.md">Level 22</a></p>
+[Level 20](bandit/tasks/bandit20.md)
+[Level 22](bandit/tasks/bandit22.md)
 </html>

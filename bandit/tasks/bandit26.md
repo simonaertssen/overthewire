@@ -12,6 +12,6 @@ Find out what it is, how it works and how to break out of it.</p>
 
 <h1>Solution</h1>
 
-<p style="text-align: left"><a href="bandit/tasks/bandit25.md">Level 25</a></p>
-<p style="text-align: right"><a href="bandit/tasks/bandit27.md">Level 27</a></p>
+[Level 25](bandit/tasks/bandit25.md)
+[Level 27](bandit/tasks/bandit27.md)
 </html>

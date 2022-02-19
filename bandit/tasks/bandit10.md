@@ -30,6 +30,6 @@ c^ LAh=3G
 S=A.H&^
 ```
 
-<p style="text-align: left"><a href="bandit/tasks/bandit9.md">Level 9</a></p>
-<p style="text-align: right"><a href="bandit/tasks/bandit11.md">Level 11</a></p>
+[Level 9](bandit/tasks/bandit9.md)
+[Level 11](bandit/tasks/bandit11.md)
 </html>

@@ -12,6 +12,6 @@
 
 <h1>Solution</h1>
 
-<p style="text-align: left"><a href="bandit/tasks/bandit31.md">Level 31</a></p>
-<p style="text-align: right"><a href="bandit/tasks/bandit33.md">Level 33</a></p>
+[Level 31](bandit/tasks/bandit31.md)
+[Level 33](bandit/tasks/bandit33.md)
 </html>

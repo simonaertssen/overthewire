@@ -56,9 +56,13 @@ def read_bandit_page(levelnum):
                 f.write(g.read() + '\n')  # Copy all contents into the new file
 
     # Write previous and next level to the bottom of the page
+    # if levelnum > 0:
+    #     f.write(f'<p style="text-align: left"><a href="bandit/tasks/bandit{levelnum - 1}.md">Level {levelnum - 1}</a></p>\n')
+    # f.write(f'<p style="text-align: right"><a href="bandit/tasks/bandit{levelnum + 1}.md">Level {levelnum + 1}</a></p>\n')
+
     if levelnum > 0:
-        f.write(f'<p style="text-align: left"><a href="bandit/tasks/bandit{levelnum - 1}.md">Level {levelnum - 1}</a></p>\n')
-    f.write(f'<p style="text-align: right"><a href="bandit/tasks/bandit{levelnum + 1}.md">Level {levelnum + 1}</a></p>\n')
+        f.write(f'[Level {levelnum - 1}](bandit/tasks/bandit{levelnum - 1}.md)\n')
+    f.write(f'[Level {levelnum + 1}](bandit/tasks/bandit{levelnum + 1}.md)\n')
 
     # End the file and close it
     f.write('</html>\n')
