@@ -1,26 +1,21 @@
-<h1>Bandit 1</h1>
+<h1>Bandit 0</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>The password for the next level is stored in a file called
-<strong>readme</strong> located in the home directory. Use this password to log
-into bandit1 using SSH. Whenever you find a password for a level,
-use SSH (on port 2220) to log into that level and continue the game.</p>
+<p>The goal of this level is for you to log into the game using SSH.
+The host to which you need to connect is
+<strong>bandit.labs.overthewire.org</strong>, on port 2220.
+The username is <strong>bandit0</strong> and the password is <strong>bandit0</strong>. Once
+logged in, go to the <a href="/wargames/bandit/bandit1.html">Level 1</a> page to find out how to beat Level
+1.</p>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
-<p>ls, cd, cat, file, du, find</p>
+<p>ssh</p>
+
+<h2 id="helpful-reading-material">Helpful Reading Material</h2>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Secure_Shell">Secure Shell (SSH) on Wikipedia</a></li>
+  <li><a href="https://www.wikihow.com/Use-SSH">How to use SSH on wikiHow</a></li>
+</ul>
 
 
-<h1>Solution</h1>
-
-```
-user@host:~$ ssh bandit1@bandit.labs.overthewire.org -p 2220
-boJ9jbbUNNfktd78OOpsqOltutMc3MY1
-
-bandit1@bandit:~$ ls -a
--  .  ..  .bash_logout  .bashrc  .profile
-bandit1@bandit:~$ cat < -
-CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
-```
-
-<a href="bandit0.md">Level 0</a>
-<a href="bandit2.md">Level 2</a>
+<a href="bandit1.md">Level 1</a>

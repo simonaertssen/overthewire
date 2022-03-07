@@ -1,7 +1,7 @@
-<h1>Bandit 30</h1>
+<h1>Bandit 29</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>There is a git repository at <code class="language-plaintext highlighter-rouge">ssh://<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4220232c262b36707b6f252b36022e2d21232e2a2d3136">[email&#160;protected]</a>/home/bandit29-git/repo</code>. The password for the user <code class="language-plaintext highlighter-rouge">bandit29-git</code> is the same as for the user <code class="language-plaintext highlighter-rouge">bandit29</code>.</p>
+<p>There is a git repository at <code class="language-plaintext highlighter-rouge">ssh://<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c7a5a6a9a3aeb3f5ffeaa0aeb387aba8a4a6abafa8b4b3">[email&#160;protected]</a>/home/bandit28-git/repo</code>. The password for the user <code class="language-plaintext highlighter-rouge">bandit28-git</code> is the same as for the user <code class="language-plaintext highlighter-rouge">bandit28</code>.</p>
 
 <p>Clone the repository and find the password for the next level.</p>
 
@@ -11,5 +11,10 @@
 
 <h1>Solution</h1>
 
-<a href="bandit29.md">Level 29</a>
-<a href="bandit31.md">Level 31</a>
+```
+user@host:~$ ssh bandit29@bandit.labs.overthewire.org -p 2220
+bbc96594b4e001778eee9975372716b2
+```
+
+<a href="bandit28.md">Level 28</a>
+<a href="bandit30.md">Level 30</a>

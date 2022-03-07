@@ -1,14 +1,9 @@
-<h1>Bandit 23</h1>
+<h1>Bandit 22</h1>
 
 <h2 id="level-goal">Level Goal</h2>
 <p>A program is running automatically at regular intervals from
 <strong>cron</strong>, the time-based job scheduler. Look in <strong>/etc/cron.d/</strong> for
 the configuration and see what command is being executed.</p>
-
-<p><strong>NOTE:</strong> Looking at shell scripts written by other people is a
-very useful skill. The script for this level is intentionally made
-easy to read. If you are having problems understanding what it does,
-try executing it to see the debug information it prints.</p>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
 <p>cron, crontab, crontab(5) (use “man 5 crontab” to access this)</p>
@@ -17,55 +12,33 @@ try executing it to see the debug information it prints.</p>
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit23@bandit.labs.overthewire.org -p 2220
-jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+user@host:~$ ssh bandit22@bandit.labs.overthewire.org -p 2220
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 
-bandit23@bandit:~$ ls
-bandit23@bandit:~$ ls /etc/cron.d/
+bandit22@bandit:~$ ls /etc/cron.d/
 cronjob_bandit15_root  cronjob_bandit22  cronjob_bandit24
 cronjob_bandit17_root  cronjob_bandit23  cronjob_bandit25_root
-bandit23@bandit:~$ cat /etc/cron.d/cronjob_bandit24
-@reboot bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
-* * * * * bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
-bandit23@bandit:~$ cat /usr/bin/cronjob_bandit24.sh
+bandit22@bandit:~$ cat /etc/cron.d/cronjob_bandit23
+@reboot bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+* * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+bandit22@bandit:~$ cat /usr/bin/cronjob_bandit23.sh
 #!/bin/bash
 
 myname=$(whoami)
+mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
 
-cd /var/spool/$myname
-echo "Executing and deleting all scripts in /var/spool/$myname:"
-for i in * .*;
-do
-    if [ "$i" != "." -a "$i" != ".." ];
-    then
-        echo "Handling $i"
-        owner="$(stat --format "%U" ./$i)"
-        if [ "${owner}" = "bandit23" ]; then
-            timeout -s 9 60 ./$i
-        fi
-        rm -f ./$i
-    fi
-done
+echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
+
+cat /etc/bandit_pass/$myname > /tmp/$mytarget
+bandit22@bandit:~$ /usr/bin/cronjob_bandit23.sh
+Copying passwordfile /etc/bandit_pass/bandit22 to /tmp/8169b67bd894ddbb4412f91573b38db3
+bandit22@bandit:~$ cat /tmp/8169b67bd894ddbb4412f91573b38db3
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+bandit22@bandit:~$ echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+8ca319486bfbbc3663ea0fbe81326349
+bandit22@bandit:~$ cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
 ```
 
-If we have a file that is owned by ourself in that directory, it will be executed!
-
-```
-bandit23@bandit:~$ mkdir /tmp/mytmp
-bandit23@bandit:~$ vim /tmp/mytmp/runme.sh
-  #!/bin/bash
-  cat /etc/bandit_pass/bandit24 >> /tmp/mytmp/psswrd.txt
-bandit23@bandit:~$ touch /tmp/mytmp/psswrd.txt
-bandit23@bandit:~$ chmod 777 -R /tmp/mytmp/
-bandit23@bandit:~$ cp /tmp/mytmp/runme.sh /var/spool/bandit24/runme.sh
-```
-
-And after waiting a minute:
-
-```
-bandit23@bandit:~$ cat /tmp/mytmp/psswrd.txt
-UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
-```
-
-<a href="bandit22.md">Level 22</a>
-<a href="bandit24.md">Level 24</a>
+<a href="bandit21.md">Level 21</a>
+<a href="bandit23.md">Level 23</a>

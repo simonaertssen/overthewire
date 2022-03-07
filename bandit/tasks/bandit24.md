@@ -1,37 +1,60 @@
-<h1>Bandit 25</h1>
+<h1>Bandit 24</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>A daemon is listening on port 30002 and will give you the password for
-bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode.
-There is no way to retrieve the pincode except by going through all of the 10000
-combinations, called brute-forcing.</p>
+<p>A program is running automatically at regular intervals from
+<strong>cron</strong>, the time-based job scheduler. Look in <strong>/etc/cron.d/</strong> for
+the configuration and see what command is being executed.</p>
+
+<p><strong>NOTE:</strong> This level requires you to create your own first
+shell-script. This is a very big step and you should be proud of
+yourself when you beat this level!</p>
+
+<p><strong>NOTE 2:</strong> Keep in mind that your shell script is removed once
+executed, so you may want to keep a copy around…</p>
+
+<h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
+<p>cron, crontab, crontab(5) (use “man 5 crontab” to access this)</p>
 
 
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit25@bandit.labs.overthewire.org -p 2220
-uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+user@host:~$ ssh bandit24@bandit.labs.overthewire.org -p 2220
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 
-bandit25@bandit:~$ cat /etc/passwd | grep bandit26
-bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
-bandit25@bandit:~$ cat /usr/bin/showtext
-#!/bin/sh
-
-export TERM=linux
-
-more ~/text.txt
-exit 0
+bandit24@bandit:~$ nc localhost 30002
+I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 1111
+Wrong! Please enter the correct pincode. Try again.
+^C
 ```
 
-So if we rescale our terminal, then not all text should be printed at once and we can interact using vim.
+Let's make a script that automatically tries all combinations.
 
 ```
-bandit25@bandit:~$ ssh -i bandit26.sshkey bandit26@localhost
-v
-:e /etc/bandit_pass/bandit26
-5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+bandit24@bandit:~$ mkdir /tmp/scripts/
+bandit24@bandit:~$ vim /tmp/myscripts/runme.sh
+  1 #!/bin/bash
+  2 for i in {0000..9999}; do
+  3     echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ" $i >> /tmp/myscripts/combinations.txt
+  4 done
+bandit24@bandit:~$ chmod -x /tmp/myscripts/runme.sh
+bandit24@bandit:~$ touch /tmp/myscripts/combinations.txt
+bandit24@bandit:~$ ls /tmp/myscripts/
+combinations.txt  runme.sh
+bandit24@bandit:~$ bash /tmp/myscripts/runme.sh
+bandit24@bandit:~$ cat /tmp/myscripts/combinations.txt | nc localhost 30002
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+...
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Correct!
+The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+Exiting.
 ```
 
-<a href="bandit24.md">Level 24</a>
-<a href="bandit26.md">Level 26</a>
+<a href="bandit23.md">Level 23</a>
+<a href="bandit25.md">Level 25</a>

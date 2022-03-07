@@ -1,21 +1,27 @@
-<h1>Bandit 8</h1>
+<h1>Bandit 7</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>The password for the next level is stored in the file <strong>data.txt</strong>
-next to the word <strong>millionth</strong></p>
+<p>The password for the next level is stored <strong>somewhere on the
+server</strong> and has all of the following properties:</p>
+<ul>
+  <li>owned by user bandit7</li>
+  <li>owned by group bandit6</li>
+  <li>33 bytes in size</li>
+</ul>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
-<p>grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd</p>
+<p>ls, cd, cat, file, du, find, grep</p>
+
 
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit8@bandit.labs.overthewire.org -p 2220
-cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+user@host:~$ ssh bandit7@bandit.labs.overthewire.org -p 2220
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
 
-bandit8@bandit:~$ cat data.txt | sort | uniq -u
-UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+bandit7@bandit:~$ grep millionth data.txt
+millionth       cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 ```
 
-<a href="bandit7.md">Level 7</a>
-<a href="bandit9.md">Level 9</a>
+<a href="bandit6.md">Level 6</a>
+<a href="bandit8.md">Level 8</a>

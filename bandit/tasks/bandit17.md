@@ -1,50 +1,36 @@
-<h1>Bandit 18</h1>
+<h1>Bandit 17</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>There are 2 files in the homedirectory: <strong>passwords.old and
-passwords.new</strong>. The password for the next level is in
-<strong>passwords.new</strong> and is the only line that has been changed between
-<strong>passwords.old and passwords.new</strong></p>
-
-<p><strong>NOTE: if you have solved this level and see ‘Byebye!’ when trying
-to log into bandit18, this is related to the next level, bandit19</strong></p>
+<p>The credentials for the next level can be retrieved by submitting the
+password of the current level to <strong>a port on localhost in the range
+31000 to 32000</strong>. First find out which of these ports have a server
+listening on them. Then find out which of those speak SSL and which
+don’t. There is only 1 server that will give the next credentials, the
+others will simply send back to you whatever you send to it.</p>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
-<p>cat, grep, ls, diff</p>
+<p>ssh, telnet, nc, openssl, s_client, nmap</p>
+
+<h2 id="helpful-reading-material">Helpful Reading Material</h2>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Port_scanner">Port scanner on Wikipedia</a></li>
+</ul>
 
 
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit18@bandit.labs.overthewire.org -p 2220
-kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
-```
-
-Damn. Can't login. Let's see whether we can use another shell than bash.
-
-```
 user@host:~$ ssh bandit17@bandit.labs.overthewire.org -p 2220
 xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
 
-bandit17@bandit:~$ cat /etc/shells
-# /etc/shells: valid login shells
-/bin/sh
-/bin/dash
-/bin/bash
-/bin/rbash
-/usr/bin/screen
-/usr/bin/tmux
-/usr/bin/showtext
+bandit17@bandit:~$ ls
+passwords.new  passwords.old
+bandit17@bandit:~$ diff passwords.old passwords.new
+42c42
+< w0Yfolrc5bwjS4qw5mq1nnQi6mF03bii
+---
+> kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
 ```
 
-```
-ssh bandit18@bandit.labs.overthewire.org -p 2220 -t "/bin/sh"
-kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
-$ ls
-readme
-$ cat readme
-IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
-```
-
-<a href="bandit17.md">Level 17</a>
-<a href="bandit19.md">Level 19</a>
+<a href="bandit16.md">Level 16</a>
+<a href="bandit18.md">Level 18</a>

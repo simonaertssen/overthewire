@@ -16,7 +16,7 @@ def read_bandit_page(levelnum):
     if not os.path.isdir('./bandit/tasks'):
         os.mkdir('./bandit/tasks')
 
-    filename = f'./bandit/tasks/bandit{levelnum-1}.md'
+    filename = f'./bandit/tasks/bandit{levelnum}.md'
     f = open(filename, 'w')
 
     # Fetch url contents

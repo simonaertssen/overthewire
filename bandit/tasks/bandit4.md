@@ -1,9 +1,8 @@
-<h1>Bandit 5</h1>
+<h1>Bandit 4</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>The password for the next level is stored in the only human-readable
-file in the <strong>inhere</strong> directory. Tip: if your terminal is messed
-up, try the “reset” command.</p>
+<p>The password for the next level is stored in a hidden file in the
+<strong>inhere</strong> directory.</p>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
 <p>ls, cd, cat, file, du, find</p>
@@ -12,19 +11,27 @@ up, try the “reset” command.</p>
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit5@bandit.labs.overthewire.org -p 2220
-koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+user@host:~$ ssh bandit4@bandit.labs.overthewire.org -p 2220
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 
-bandit5@bandit:~$ ls
+bandit4@bandit:~$ ls
 inhere
-bandit5@bandit:~$ ls inhere/
-maybehere00  maybehere02  maybehere04  maybehere06  maybehere08  maybehere10  maybehere12  maybehere14  maybehere16  maybehere18
-maybehere01  maybehere03  maybehere05  maybehere07  maybehere09  maybehere11  maybehere13  maybehere15  maybehere17  maybehere19
-bandit5@bandit:~$ find ./ -type f -size 1033c ! -executable
-./inhere/maybehere07/.file2
-bandit5@bandit:~$ cat ./inhere/maybehere07/.file2
-DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+bandit4@bandit:~$ ls inhere/
+-file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07  -file08  -file09
+bandit4@bandit:~$ file */*
+inhere/-file00: data
+inhere/-file01: data
+inhere/-file02: data
+inhere/-file03: data
+inhere/-file04: data
+inhere/-file05: data
+inhere/-file06: data
+inhere/-file07: ASCII text
+inhere/-file08: data
+inhere/-file09: data
+bandit4@bandit:~$ cat inhere/-file07
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 ```
 
-<a href="bandit4.md">Level 4</a>
-<a href="bandit6.md">Level 6</a>
+<a href="bandit3.md">Level 3</a>
+<a href="bandit5.md">Level 5</a>
