@@ -1,30 +1,16 @@
 ```
-user@host:~$ ssh bandit18@bandit.labs.overthewire.org -p 2220
-kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
-```
-
-Damn. Can't login. Let's see whether we can use another shell than bash.
-
-```
-user@host:~$ ssh bandit17@bandit.labs.overthewire.org -p 2220
-xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
-
-bandit17@bandit:~$ cat /etc/shells
-# /etc/shells: valid login shells
-/bin/sh
-/bin/dash
-/bin/bash
-/bin/rbash
-/usr/bin/screen
-/usr/bin/tmux
-/usr/bin/showtext
-```
-
-```
-ssh bandit18@bandit.labs.overthewire.org -p 2220 -t "/bin/sh"
-kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
-$ ls
-readme
-$ cat readme
+user@host:~$ ssh bandit19@bandit.labs.overthewire.org -p 2220
 IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+
+bandit19@bandit:~$ ls
+bandit20-do
+bandit19@bandit:~$ file bandit20-do
+bandit20-do: setuid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=8e941f24b8c5cd0af67b22b724c57e1ab92a92a1, not stripped
+bandit19@bandit:~$ ./bandit20-do
+Run a command as another user.
+  Example: ./bandit20-do id
+bandit19@bandit:~$ ./bandit20-do id
+uid=11019(bandit19) gid=11019(bandit19) euid=11020(bandit20) groups=11019(bandit19)
+bandit19@bandit:~$ ./bandit20-do cat /etc/bandit_pass/bandit20
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 ```

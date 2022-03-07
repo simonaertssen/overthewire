@@ -16,9 +16,8 @@ def read_bandit_page(levelnum):
     if not os.path.isdir('./bandit/tasks'):
         os.mkdir('./bandit/tasks')
 
-    filename = f'./bandit/tasks/bandit{levelnum}.md'
+    filename = f'./bandit/tasks/bandit{levelnum-1}.md'
     f = open(filename, 'w')
-    # f.write('<html>\n')
 
     # Fetch url contents
     url = "https://overthewire.org/wargames/bandit/"
@@ -57,11 +56,10 @@ def read_bandit_page(levelnum):
 
     # Write previous and next level to the bottom of the page
     if levelnum > 0:
-        f.write(f'<a href="bandit{levelnum - 1}.md">Level {levelnum - 1}</a>             ')
+        f.write(f'<a href="bandit{levelnum - 1}.md">Level {levelnum - 1}</a>                   ')
     f.write(f'<a href="bandit{levelnum + 1}.md">Level {levelnum + 1}</a>\n')
 
     # End the file and close it
-    # f.write('</html>\n')
     f.close()
     return
 

@@ -1,9 +1,9 @@
 ```
-user@host:~$ ssh bandit1@bandit.labs.overthewire.org -p 2220
-boJ9jbbUNNfktd78OOpsqOltutMc3MY1
-
-bandit1@bandit:~$ ls -a
--  .  ..  .bash_logout  .bashrc  .profile
-bandit1@bandit:~$ cat < -
+user@host:~$ ssh bandit2@bandit.labs.overthewire.org -p 2220
 CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+bandit2@bandit:~$ ls
+spaces in this filename
+bandit2@bandit:~$ cat < spaces\ in\ this\ filename
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 ```

