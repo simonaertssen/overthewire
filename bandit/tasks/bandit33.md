@@ -1,10 +1,8 @@
-<h1>Bandit 33</h1>
+<h1>Bandit 34</h1>
 
-<p>After all this <code class="language-plaintext highlighter-rouge">git</code> stuff its time for another escape. Good luck!</p>
-
-<h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
-<p>sh, man</p>
+<p><strong>At this moment, level 34 does not exist yet.</strong></p>
 
 <h1>Solution</h1>
 
-<a href="bandit32.md">Level 32</a>             <a href="bandit34.md">Level 34</a>
+<a href="bandit33.md">Level 33</a>
+<a href="bandit35.md">Level 35</a>

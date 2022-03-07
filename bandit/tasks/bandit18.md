@@ -1,31 +1,32 @@
-<h1>Bandit 18</h1>
+<h1>Bandit 19</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>There are 2 files in the homedirectory: <strong>passwords.old and
-passwords.new</strong>. The password for the next level is in
-<strong>passwords.new</strong> and is the only line that has been changed between
-<strong>passwords.old and passwords.new</strong></p>
-
-<p><strong>NOTE: if you have solved this level and see ‘Byebye!’ when trying
-to log into bandit18, this is related to the next level, bandit19</strong></p>
+<p>The password for the next level is stored in a file <strong>readme</strong> in
+the homedirectory. Unfortunately, someone has modified <strong>.bashrc</strong>
+to log you out when you log in with SSH.</p>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
-<p>cat, grep, ls, diff</p>
+<p>ssh, ls, cat</p>
 
 
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit17@bandit.labs.overthewire.org -p 2220
-xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
+user@host:~$ ssh bandit19@bandit.labs.overthewire.org -p 2220
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
 
-bandit17@bandit:~$ ls
-passwords.new  passwords.old
-bandit17@bandit:~$ diff passwords.old passwords.new
-42c42
-< w0Yfolrc5bwjS4qw5mq1nnQi6mF03bii
----
-> kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+bandit19@bandit:~$ ls
+bandit20-do
+bandit19@bandit:~$ file bandit20-do
+bandit20-do: setuid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=8e941f24b8c5cd0af67b22b724c57e1ab92a92a1, not stripped
+bandit19@bandit:~$ ./bandit20-do
+Run a command as another user.
+  Example: ./bandit20-do id
+bandit19@bandit:~$ ./bandit20-do id
+uid=11019(bandit19) gid=11019(bandit19) euid=11020(bandit20) groups=11019(bandit19)
+bandit19@bandit:~$ ./bandit20-do cat /etc/bandit_pass/bandit20
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 ```
 
-<a href="bandit17.md">Level 17</a>             <a href="bandit19.md">Level 19</a>
+<a href="bandit18.md">Level 18</a>
+<a href="bandit20.md">Level 20</a>

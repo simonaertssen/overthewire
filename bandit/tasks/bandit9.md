@@ -1,26 +1,25 @@
-<h1>Bandit 9</h1>
+<h1>Bandit 10</h1>
 
 <h2 id="level-goal">Level Goal</h2>
 <p>The password for the next level is stored in the file <strong>data.txt</strong>
-and is the only line of text that occurs only once</p>
+in one of the few human-readable strings, preceded by several ‘=’
+characters.</p>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
 <p>grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd</p>
-
-<h2 id="helpful-reading-material">Helpful Reading Material</h2>
-<ul>
-  <li><a href="https://ryanstutorials.net/linuxtutorial/piping.php">Piping and Redirection</a></li>
-</ul>
 
 
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit8@bandit.labs.overthewire.org -p 2220
-cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+user@host:~$ ssh bandit10@bandit.labs.overthewire.org -p 2220
+truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 
-bandit8@bandit:~$ cat data.txt | sort | uniq -u
-UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+bandit10@bandit:~$ cat data.txt
+VGhlIHBhc3N3b3JkIGlzIElGdWt3S0dzRlc4TU9xM0lSRnFyeEUxaHhUTkViVVBSCg==
+bandit10@bandit:~$ base64 -d data.txt
+The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 ```
 
-<a href="bandit8.md">Level 8</a>             <a href="bandit10.md">Level 10</a>
+<a href="bandit9.md">Level 9</a>
+<a href="bandit11.md">Level 11</a>

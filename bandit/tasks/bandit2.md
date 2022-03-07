@@ -1,29 +1,34 @@
-<h1>Bandit 2</h1>
+<h1>Bandit 3</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>The password for the next level is stored in a file called <strong>-</strong>
-located in the home directory</p>
+<p>The password for the next level is stored in a file called <strong>spaces
+in this filename</strong> located in the home directory</p>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
 <p>ls, cd, cat, file, du, find</p>
 
 <h2 id="helpful-reading-material">Helpful Reading Material</h2>
 <ul>
-  <li><a href="https://www.google.com/search?q=dashed+filename">Google Search for “dashed filename”</a></li>
-  <li><a href="http://tldp.org/LDP/abs/html/special-chars.html">Advanced Bash-scripting Guide - Chapter 3 - Special Characters</a></li>
+  <li><a href="https://www.google.com/search?q=spaces+in+filename">Google Search for “spaces in filename”</a></li>
 </ul>
 
 
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit1@bandit.labs.overthewire.org -p 2220
-boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+user@host:~$ ssh bandit3@bandit.labs.overthewire.org -p 2220
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 
-bandit1@bandit:~$ ls -a
--  .  ..  .bash_logout  .bashrc  .profile
-bandit1@bandit:~$ cat < -
-CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+bandit3@bandit:~$ ls
+inhere
+bandit3@bandit:~$ ls -la inhere/
+total 12
+drwxr-xr-x 2 root    root    4096 May  7  2020 .
+drwxr-xr-x 3 root    root    4096 May  7  2020 ..
+-rw-r----- 1 bandit4 bandit3   33 May  7  2020 .hidden
+bandit3@bandit:~$ cat inhere/.hidden
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 ```
 
-<a href="bandit1.md">Level 1</a>             <a href="bandit3.md">Level 3</a>
+<a href="bandit2.md">Level 2</a>
+<a href="bandit4.md">Level 4</a>

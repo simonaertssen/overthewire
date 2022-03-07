@@ -1,37 +1,36 @@
-<h1>Bandit 26</h1>
+<h1>Bandit 27</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>Logging in to bandit26 from bandit25 should be fairly easy…
-The shell for user bandit26 is not <strong>/bin/bash</strong>, but something else.
-Find out what it is, how it works and how to break out of it.</p>
+<p>Good job getting a shell! Now hurry and grab the password for bandit27!</p>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
-<p>ssh, cat, more, vi, ls, id, pwd</p>
-
+<p>ls</p>
 
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit25@bandit.labs.overthewire.org -p 2220
-uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+user@host:~$ ssh bandit27@bandit.labs.overthewire.org -p 2220
+3ba3118a22e93127a4ed485be72ef5ea
 
-bandit25@bandit:~$ cat /etc/passwd | grep bandit26
-bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
-bandit25@bandit:~$ cat /usr/bin/showtext
-#!/bin/sh
+bandit27@bandit:~$ mkdir /tmp/tempdir
+bandit27@bandit:~$ cd /tmp/tempdir
+bandit27@bandit:/tmp/tempdir$ git clone ssh://bandit27-git@localhost/home/bandit27-git/repo
+Cloning into 'repo'...
+Could not create directory '/home/bandit27/.ssh'.
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/bandit27/.ssh/known_hosts).
+This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
 
-export TERM=linux
-
-more ~/text.txt
-exit 0
+bandit27-git@localhost's password:
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (3/3), done.
+bandit27@bandit:/tmp/tempdir$ cat repo/README
+The password to the next level is: 0ef186ac70e04ea33b4c1853d2526fa2
 ```
 
-So if we rescale our terminal, then not all text should be printed at once and we can interact using vim.
-
-```
-bandit25@bandit:~$ ssh -i bandit26.sshkey bandit26@localhost
-v
-:e /etc/bandit_pass/bandit26
-5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
-```
-<a href="bandit25.md">Level 25</a>             <a href="bandit27.md">Level 27</a>
+<a href="bandit26.md">Level 26</a>
+<a href="bandit28.md">Level 28</a>

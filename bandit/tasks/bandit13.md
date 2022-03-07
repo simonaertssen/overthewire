@@ -1,72 +1,32 @@
-<h1>Bandit 13</h1>
+<h1>Bandit 14</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>The password for the next level is stored in the file <strong>data.txt</strong>,
-which is a hexdump of a file that has been repeatedly compressed.
-For this level it may be useful to create a directory under /tmp in
-which you can work using mkdir. For example: mkdir /tmp/myname123.
-Then copy the datafile using cp, and rename it using mv (read the
-manpages!)</p>
+<p>The password for the next level is stored in
+<strong>/etc/bandit_pass/bandit14 and can only be read by user
+bandit14</strong>. For this level, you don’t get the next password, but you
+get a private SSH key that can be used to log into the next level.
+<strong>Note:</strong> <strong>localhost</strong> is a hostname that refers to the machine
+you are working on</p>
 
 <h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
-<p>grep, sort, uniq, strings, base64, tr, tar, gzip, bzip2, xxd, mkdir,
-cp, mv, file</p>
+<p>ssh, telnet, nc, openssl, s_client, nmap</p>
 
 <h2 id="helpful-reading-material">Helpful Reading Material</h2>
 <ul>
-  <li><a href="https://en.wikipedia.org/wiki/Hex_dump">Hex dump on Wikipedia</a></li>
+  <li><a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys">SSH/OpenSSH/Keys</a></li>
 </ul>
 
 
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit12@bandit.labs.overthewire.org -p 2220
-5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+user@host:~$ ssh bandit14@bandit.labs.overthewire.org -p 2220
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
 
-bandit12@bandit:~$ mkdir /tmp/temp/
-bandit12@bandit:~$ cp data.txt /tmp/temp/temporary.txt
-bandit12@bandit:~$ cd /tmp/temp/
-bandit12@bandit:/tmp/temp$ cat temporary.txt | xxd -r > data
-bandit12@bandit:/tmp/temp$ file data
-data: gzip compressed data, was "data2.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
-bandit12@bandit:/tmp/temp$ mv data data2.gz
-bandit12@bandit:/tmp/temp$ gzip -d data2.gz
-bandit12@bandit:/tmp/temp$ file data2
-data2: bzip2 compressed data, block size = 900k
-bandit12@bandit:/tmp/temp$ mv data2 data3.bz
-bandit12@bandit:/tmp/temp$ bzip2 -d data3.bz
-bandit12@bandit:/tmp/temp$ file data3
-data3: gzip compressed data, was "data4.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
-bandit12@bandit:/tmp/temp$ mv data3 data4.gz
-bandit12@bandit:/tmp/temp$ gzip -d data4.gz
-bandit12@bandit:/tmp/temp$ file data4
-data4: POSIX tar archive (GNU)
-bandit12@bandit:~$mv data4 data5.tar
-bandit12@bandit:~$tar -d data5.tar
-bandit12@bandit:~$tar -xf data5.tar
-data5.bin  data5.tar  data6.tar  data7.tar  data8  temporary.txt
-bandit12@bandit:/tmp/temp$ file data5.bin
-data5.bin: POSIX tar archive (GNU)
-bandit12@bandit:~$mv data5.bin data6.tar
-bandit12@bandit:~$tar -xf data6.tar
-bandit12@bandit:/tmp/temp$ file data6.bin
-data6.bin: bzip2 compressed data, block size = 900kbandit12@bandit:~$mv data6.bin data6.bz
-bandit12@bandit:~$bzip2 -d data6.bz
-bandit12@bandit:/tmp/temp$ file data6
-data6: POSIX tar archive (GNU)bandit12@bandit:~$mv data6 data7.tar
-bandit12@bandit:/tmp/temp$ mv data6 data7.tar
-bandit12@bandit:~$tar -xf data7.tar
-bandit12@bandit:/tmp/temp$ file data8.bin
-data8.bin: gzip compressed data, was "data9.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
-bandit12@bandit:~$mv data8.bin data8.gz
-bandit12@bandit:~$gzip -d data8.gz
-bandit12@bandit:~$file data8
-data8: ASCII text
-bandit12@bandit:/tmp/temp$ cat data8
-The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+bandit14@bandit:~$ echo 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e | nc localhost 30000
+Correct!
+BfMYroe26WYalil77FoDi9qh59eK5xNr
 ```
 
-This was an annoying level.
-
-<a href="bandit12.md">Level 12</a>             <a href="bandit14.md">Level 14</a>
+<a href="bandit13.md">Level 13</a>
+<a href="bandit15.md">Level 15</a>

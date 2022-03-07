@@ -1,34 +1,42 @@
-<h1>Bandit 20</h1>
+<h1>Bandit 21</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>To gain access to the next level, you should use the setuid binary
-in the homedirectory. Execute it without arguments to find out how
-to use it. The password for this level can be found in the usual
-place (/etc/bandit_pass), after you have used the setuid binary.</p>
+<p>There is a setuid binary in the homedirectory that does the
+following: it makes a connection to localhost on the port you
+specify as a commandline argument. It then reads a line of text from
+the connection and compares it to the password in the previous level
+(bandit20). If the password is correct, it will transmit the
+password for the next level (bandit21).</p>
 
-<h2 id="helpful-reading-material">Helpful Reading Material</h2>
-<ul>
-  <li><a href="https://en.wikipedia.org/wiki/Setuid">setuid on Wikipedia</a></li>
-</ul>
+<p><strong>NOTE:</strong> Try connecting to your own network daemon to see if it
+works as you think</p>
+
+<h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
+<p>ssh, nc, cat, bash, screen, tmux, Unix ‘job control’ (bg, fg, jobs, &amp;, CTRL-Z, …)</p>
 
 
 <h1>Solution</h1>
 
 ```
-user@host:~$ ssh bandit19@bandit.labs.overthewire.org -p 2220
-IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+user@host:~$ ssh bandit21@bandit.labs.overthewire.org -p 2220
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
 
-bandit19@bandit:~$ ls
-bandit20-do
-bandit19@bandit:~$ file bandit20-do
-bandit20-do: setuid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=8e941f24b8c5cd0af67b22b724c57e1ab92a92a1, not stripped
-bandit19@bandit:~$ ./bandit20-do
-Run a command as another user.
-  Example: ./bandit20-do id
-bandit19@bandit:~$ ./bandit20-do id
-uid=11019(bandit19) gid=11019(bandit19) euid=11020(bandit20) groups=11019(bandit19)
-bandit19@bandit:~$ ./bandit20-do cat /etc/bandit_pass/bandit20
-GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+bandit21@bandit:~$ ls /etc/cron.d/
+cronjob_bandit15_root  cronjob_bandit23       .placeholder
+cronjob_bandit17_root  cronjob_bandit24
+cronjob_bandit22       cronjob_bandit25_root
+bandit21@bandit:~$ ls /etc/cron.d/cronjob_bandit22
+/etc/cron.d/cronjob_bandit22
+bandit21@bandit:~$ cat /etc/cron.d/cronjob_bandit22
+@reboot bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+* * * * * bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+bandit21@bandit:~$ cat /usr/bin/cronjob_bandit22.sh
+#!/bin/bash
+chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+bandit21@bandit:~$ cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 ```
 
-<a href="bandit19.md">Level 19</a>             <a href="bandit21.md">Level 21</a>
+<a href="bandit20.md">Level 20</a>
+<a href="bandit22.md">Level 22</a>
