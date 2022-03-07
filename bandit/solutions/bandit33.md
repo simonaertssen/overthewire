@@ -1,12 +1,3 @@
-<h1>Bandit 33</h1>
-
-<p>After all this <code class="language-plaintext highlighter-rouge">git</code> stuff its time for another escape. Good luck!</p>
-
-<h2 id="commands-you-may-need-to-solve-this-level">Commands you may need to solve this level</h2>
-<p>sh, man</p>
-
-<h1>Solution</h1>
-
 ```
 user@host:~$ ssh bandit33@bandit.labs.overthewire.org -p 2220
 c9c3199ddf4121b10cf581a98d51caee
@@ -23,5 +14,3 @@ In the meantime, you could play some of our other wargames.
 
 If you have an idea for an awesome new level, please let us know!
 ```
-<a href="bandit32.md">Level 32</a>
-<a href="bandit34.md">Level 34</a>
