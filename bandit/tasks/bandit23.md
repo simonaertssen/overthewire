@@ -67,5 +67,5 @@ bandit23@bandit:~$ cat /tmp/mytmp/psswrd.txt
 UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 ```
 
-<a href="bandit22.md">Level 22</a>
-<a href="bandit24.md">Level 24</a>
+[bandit level 22](bandit/tasks/bandit22.md)
+[bandit level 24](bandit/tasks/bandit24.md)

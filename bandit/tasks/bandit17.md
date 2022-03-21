@@ -32,5 +32,5 @@ bandit17@bandit:~$ diff passwords.old passwords.new
 > kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
 ```
 
-<a href="bandit16.md">Level 16</a>
-<a href="bandit18.md">Level 18</a>
+[bandit level 16](bandit/tasks/bandit16.md)
+[bandit level 18](bandit/tasks/bandit18.md)

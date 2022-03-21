@@ -33,5 +33,5 @@ bandit4@bandit:~$ cat inhere/-file07
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 ```
 
-<a href="bandit3.md">Level 3</a>
-<a href="bandit5.md">Level 5</a>
+[bandit level 3](bandit/tasks/bandit3.md)
+[bandit level 5](bandit/tasks/bandit5.md)

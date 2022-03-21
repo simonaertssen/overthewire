@@ -1,7 +1,7 @@
 <h1>Bandit 28</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>There is a git repository at <code class="language-plaintext highlighter-rouge">ssh://<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ffdfef1fbf6ebada8b2f8f6ebdff3f0fcfef3f7f0eceb">[email&#160;protected]</a>/home/bandit27-git/repo</code>. The password for the user <code class="language-plaintext highlighter-rouge">bandit27-git</code> is the same as for the user <code class="language-plaintext highlighter-rouge">bandit27</code>.</p>
+<p>There is a git repository at <code class="language-plaintext highlighter-rouge">ssh://<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c8aaa9a6aca1bcfaffe5afa1bc88a4a7aba9a4a0a7bbbc">[email&#160;protected]</a>/home/bandit27-git/repo</code>. The password for the user <code class="language-plaintext highlighter-rouge">bandit27-git</code> is the same as for the user <code class="language-plaintext highlighter-rouge">bandit27</code>.</p>
 
 <p>Clone the repository and find the password for the next level.</p>
 
@@ -82,5 +82,5 @@ index 3f7cee8..5c6457b 100644
 +- password: xxxxxxxxxx
 ```
 
-<a href="bandit27.md">Level 27</a>
-<a href="bandit29.md">Level 29</a>
+[bandit level 27](bandit/tasks/bandit27.md)
+[bandit level 29](bandit/tasks/bandit29.md)

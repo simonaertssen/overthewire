@@ -28,5 +28,5 @@ Correct!
 BfMYroe26WYalil77FoDi9qh59eK5xNr
 ```
 
-<a href="bandit13.md">Level 13</a>
-<a href="bandit15.md">Level 15</a>
+[bandit level 13](bandit/tasks/bandit13.md)
+[bandit level 15](bandit/tasks/bandit15.md)

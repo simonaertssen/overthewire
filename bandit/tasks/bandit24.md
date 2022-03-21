@@ -56,5 +56,5 @@ The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
 Exiting.
 ```
 
-<a href="bandit23.md">Level 23</a>
-<a href="bandit25.md">Level 25</a>
+[bandit level 23](bandit/tasks/bandit23.md)
+[bandit level 25](bandit/tasks/bandit25.md)

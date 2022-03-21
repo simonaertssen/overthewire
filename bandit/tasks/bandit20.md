@@ -57,5 +57,5 @@ Password matches, sending next password
 gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
 ```
 
-<a href="bandit19.md">Level 19</a>
-<a href="bandit21.md">Level 21</a>
+[bandit level 19](bandit/tasks/bandit19.md)
+[bandit level 21](bandit/tasks/bandit21.md)

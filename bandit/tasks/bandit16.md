@@ -175,5 +175,5 @@ bandit17@bandit:~$ cat /etc/bandit_pass/bandit17
 xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
 ```
 
-<a href="bandit15.md">Level 15</a>
-<a href="bandit17.md">Level 17</a>
+[bandit level 15](bandit/tasks/bandit15.md)
+[bandit level 17](bandit/tasks/bandit17.md)

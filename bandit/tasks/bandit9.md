@@ -33,5 +33,5 @@ c^ LAh=3G
 S=A.H&^
 ```
 
-<a href="bandit8.md">Level 8</a>
-<a href="bandit10.md">Level 10</a>
+[bandit level 8](bandit/tasks/bandit8.md)
+[bandit level 10](bandit/tasks/bandit10.md)

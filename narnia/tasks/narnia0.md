@@ -2,4 +2,4 @@
 
 <p>There is no information for this level, intentionally.</p>
 
-<a href="narnia1.md">Level 1</a>
+[narnia level 1](narnia/tasks/narnia1.md)

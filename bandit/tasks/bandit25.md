@@ -33,5 +33,5 @@ v
 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
 ```
 
-<a href="bandit24.md">Level 24</a>
-<a href="bandit26.md">Level 26</a>
+[bandit level 24](bandit/tasks/bandit24.md)
+[bandit level 26](bandit/tasks/bandit26.md)

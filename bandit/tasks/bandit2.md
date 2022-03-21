@@ -26,5 +26,5 @@ bandit2@bandit:~$ cat < spaces\ in\ this\ filename
 UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 ```
 
-<a href="bandit1.md">Level 1</a>
-<a href="bandit3.md">Level 3</a>
+[bandit level 1](bandit/tasks/bandit1.md)
+[bandit level 3](bandit/tasks/bandit3.md)

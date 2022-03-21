@@ -51,8 +51,10 @@ def read_page(game, levelnum):
 
     # Write previous and next level to the bottom of the page
     if levelnum > 0:
-        f.write(f'<a href="{game}{levelnum - 1}.md">Level {levelnum - 1}</a>\n')
-    f.write(f'<a href="{game}{levelnum + 1}.md">Level {levelnum + 1}</a>\n')
+        # f.write(f'<a href="{game}{levelnum - 1}.md">Level {levelnum - 1}</a>\n')
+        f.write(f'[{game} level {levelnum - 1}]({game}/tasks/{game}{levelnum - 1}.md)\n')
+    # f.write(f'<a href="{game}{levelnum + 1}.md">Level {levelnum + 1}</a>\n')
+    f.write(f'[{game} level {levelnum + 1}]({game}/tasks/{game}{levelnum + 1}.md)\n')
 
     # End the file and close it
     f.close()

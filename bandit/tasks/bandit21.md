@@ -38,5 +38,5 @@ bandit21@bandit:~$ cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 ```
 
-<a href="bandit20.md">Level 20</a>
-<a href="bandit22.md">Level 22</a>
+[bandit level 20](bandit/tasks/bandit20.md)
+[bandit level 22](bandit/tasks/bandit22.md)

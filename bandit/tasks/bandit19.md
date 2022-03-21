@@ -28,5 +28,5 @@ bandit19@bandit:~$ ./bandit20-do cat /etc/bandit_pass/bandit20
 GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 ```
 
-<a href="bandit18.md">Level 18</a>
-<a href="bandit20.md">Level 20</a>
+[bandit level 18](bandit/tasks/bandit18.md)
+[bandit level 20](bandit/tasks/bandit20.md)

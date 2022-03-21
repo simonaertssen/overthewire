@@ -32,5 +32,5 @@ bandit27@bandit:/tmp/tempdir$ cat repo/README
 The password to the next level is: 0ef186ac70e04ea33b4c1853d2526fa2
 ```
 
-<a href="bandit26.md">Level 26</a>
-<a href="bandit28.md">Level 28</a>
+[bandit level 26](bandit/tasks/bandit26.md)
+[bandit level 28](bandit/tasks/bandit28.md)

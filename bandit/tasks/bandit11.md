@@ -26,5 +26,5 @@ The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 bandit11@bandit:~$
 ```
 
-<a href="bandit10.md">Level 10</a>
-<a href="bandit12.md">Level 12</a>
+[bandit level 10](bandit/tasks/bandit10.md)
+[bandit level 12](bandit/tasks/bandit12.md)

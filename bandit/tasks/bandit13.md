@@ -45,5 +45,5 @@ bandit14@bandit:~$ cat /etc/bandit_pass/bandit14
 
 Interesting how we can pass through machines like that. I guess I didn't have to `nmap` after all.
 
-<a href="bandit12.md">Level 12</a>
-<a href="bandit14.md">Level 14</a>
+[bandit level 12](bandit/tasks/bandit12.md)
+[bandit level 14](bandit/tasks/bandit14.md)

@@ -35,5 +35,5 @@ bandit26@bandit:~$ ./bandit27-do cat /etc/bandit_pass/bandit27
 3ba3118a22e93127a4ed485be72ef5ea
 ```
 
-<a href="bandit25.md">Level 25</a>
-<a href="bandit27.md">Level 27</a>
+[bandit level 25](bandit/tasks/bandit25.md)
+[bandit level 27](bandit/tasks/bandit27.md)

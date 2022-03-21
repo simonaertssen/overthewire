@@ -4,5 +4,5 @@
 
 <h1>Solution</h1>
 
-<a href="narnia4.md">Level 4</a>
-<a href="narnia6.md">Level 6</a>
+[narnia level 4](narnia/tasks/narnia4.md)
+[narnia level 6](narnia/tasks/narnia6.md)
