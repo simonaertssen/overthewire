@@ -1,7 +1,7 @@
 <h1>Bandit 30</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>There is a git repository at <code class="language-plaintext highlighter-rouge">ssh://<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ee8c8f808a879adcd7c389879aae82818d8f8286819d9a">[email&#160;protected]</a>/home/bandit29-git/repo</code>. The password for the user <code class="language-plaintext highlighter-rouge">bandit29-git</code> is the same as for the user <code class="language-plaintext highlighter-rouge">bandit29</code>.</p>
+<p>There is a git repository at <code class="language-plaintext highlighter-rouge">ssh://<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e381828d878a97d1dace848a97a38f8c80828f8b8c9097">[email&#160;protected]</a>/home/bandit29-git/repo</code>. The password for the user <code class="language-plaintext highlighter-rouge">bandit29-git</code> is the same as for the user <code class="language-plaintext highlighter-rouge">bandit29</code>.</p>
 
 <p>Clone the repository and find the password for the next level.</p>
 
@@ -48,5 +48,6 @@ secret
 bandit30@bandit:/tmp/pmt/repo$ git show secret
 47e603bb428404d265f59c42920d81e5
 ```
+
 <a href="bandit29.md">Level 29</a>
 <a href="bandit31.md">Level 31</a>

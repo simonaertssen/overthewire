@@ -5,3 +5,4 @@ This repository contains my answers to the different overthewire wargames, as a 
 The solutions to each step is given without too much explanation. Spoiler alert!
 
 `bandit`: get started on [bandit level 0](bandit/tasks/bandit0.md)
+`narnia`: get started on [narnia level 0](narnia/tasks/narnia0.md)

@@ -1,7 +1,7 @@
 <h1>Bandit 32</h1>
 
 <h2 id="level-goal">Level Goal</h2>
-<p>There is a git repository at <code class="language-plaintext highlighter-rouge">ssh://<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1577747b717c61262438727c6155797a7674797d7a6661">[email&#160;protected]</a>/home/bandit31-git/repo</code>. The password for the user <code class="language-plaintext highlighter-rouge">bandit31-git</code> is the same as for the user <code class="language-plaintext highlighter-rouge">bandit31</code>.</p>
+<p>There is a git repository at <code class="language-plaintext highlighter-rouge">ssh://<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7012111e14190443415d171904301c1f13111c181f0304">[email&#160;protected]</a>/home/bandit31-git/repo</code>. The password for the user <code class="language-plaintext highlighter-rouge">bandit31-git</code> is the same as for the user <code class="language-plaintext highlighter-rouge">bandit31</code>.</p>
 
 <p>Clone the repository and find the password for the next level.</p>
 
@@ -25,5 +25,6 @@ $ pwd
 $ cat /etc/bandit_pass/bandit33
 c9c3199ddf4121b10cf581a98d51caee
 ```
+
 <a href="bandit31.md">Level 31</a>
 <a href="bandit33.md">Level 33</a>

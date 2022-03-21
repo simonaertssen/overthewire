@@ -23,5 +23,6 @@ In the meantime, you could play some of our other wargames.
 
 If you have an idea for an awesome new level, please let us know!
 ```
+
 <a href="bandit32.md">Level 32</a>
 <a href="bandit34.md">Level 34</a>
