@@ -57,7 +57,7 @@ def read_page(game, levelnum):
 
     # f.write(f'<a href="{game}{levelnum + 1}.md">Level {levelnum + 1}</a>\n')
     # f.write(f'[{game} level {levelnum + 1}]({game}/tasks/{levelnum + 1}.md)\n')
-    f.write(f'[{game} level {levelnum - 1}]({levelnum + 1}.md)\n')
+    f.write(f'[{game} level {levelnum + 1}]({levelnum + 1}.md)\n')
 
     # End the file and close it
     f.close()
