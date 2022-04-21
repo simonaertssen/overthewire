@@ -26,7 +26,10 @@ def read_page(game, levelnum):
         if line == title:
             break
 
-    f.write(f'<h1>{game.capitalize()} {levelnum}</h1>\n')
+    if levelnum == 0:
+        f.write(f'<h1>{game.capitalize()} {levelnum}</h1>\n')
+    else:
+        f.write(f'<h1>{game.capitalize()} {levelnum - 1} &#x2192; {game.capitalize()} {levelnum} </h1>\n')
 
     # Read task description
     while True:
