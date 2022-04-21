@@ -42,7 +42,7 @@ def read_page(game, levelnum):
             break
         f.write(line.decode("utf-8") + '\n')
 
-    # Pull the solution on print to the same file as well
+    # Pull the solution in print to the same file as well
     if levelnum > 0:
         f.write('<h1>Solution</h1>\n\n')
         if os.path.isfile(f'./{game}/solutions/{levelnum}.md'):
@@ -63,6 +63,8 @@ def read_page(game, levelnum):
     f.close()
 
 
-def crawl(game, maxlevel):
+def crawl(game, startlevel, maxlevel):
     with Pool() as pool:
-        pool.starmap(read_page, zip(repeat(game), (i for i in range(maxlevel + 1))))
+        pool.starmap(read_page, zip(repeat(game), (i for i in range(startlevel, maxlevel + 1))))
+
+    print("Finished crawling", game)
