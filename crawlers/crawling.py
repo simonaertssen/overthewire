@@ -45,29 +45,24 @@ def read_page(game, levelnum):
             break
         f.write(line.decode("utf-8") + '\n')
 
-    # Pull the solution in print to the same file as well
-    if levelnum > 0:
+    # Pull the solution and print to the same file as well: weird numbering from banditlabs
+    if levelnum - 1 >= 0 and os.path.isfile(f'./{game}/solutions/{levelnum-1}.md'):
         f.write('<h1>Solution</h1>\n\n')
-        if os.path.isfile(f'./{game}/solutions/{levelnum}.md'):
-            with open(f'./{game}/solutions/{levelnum}.md') as g:
-                f.write(g.read() + '\n')  # Copy all contents into the new file
+        with open(f'./{game}/solutions/{levelnum-1}.md') as g:
+            f.write(g.read() + '\n')  # Copy all contents into the new file
 
     # Write previous and next level to the bottom of the page
     if levelnum > 0:
-        # f.write(f'<a href="{game}{levelnum - 1}.md">Level {levelnum - 1}</a>\n')
-        # f.write(f'[{game} level {levelnum - 1}]({game}/tasks/{levelnum - 1}.md)\n')
         f.write(f'[{game} level {levelnum - 1}]({levelnum - 1}.md)\n')
 
-    # f.write(f'<a href="{game}{levelnum + 1}.md">Level {levelnum + 1}</a>\n')
-    # f.write(f'[{game} level {levelnum + 1}]({game}/tasks/{levelnum + 1}.md)\n')
     f.write(f'[{game} level {levelnum + 1}]({levelnum + 1}.md)\n')
 
     # End the file and close it
     f.close()
 
 
-def crawl(game, startlevel, maxlevel):
+def crawl(game, maxlevel):
     with Pool() as pool:
-        pool.starmap(read_page, zip(repeat(game), (i for i in range(startlevel, maxlevel + 1))))
+        pool.starmap(read_page, zip(repeat(game), (i for i in range(maxlevel + 1))))
 
     print("Finished crawling", game)
