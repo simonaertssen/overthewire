@@ -55,7 +55,7 @@ def read_page(game, levelnum):
     if levelnum > 0:
         f.write(f'[{game} level {levelnum - 1}]({levelnum - 1}.md)\n')
 
-    f.write(f'[{game} level {levelnum + 1}]({levelnum + 1}.md)\n')
+    f.write(f'\t[{game} level {levelnum + 1}]({levelnum + 1}.md)\n')
 
     # End the file and close it
     f.close()
